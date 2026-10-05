@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Batch report{% endblock %}
+{% block content %}
+<section class="report-head"><h1>Batch report — {{ n }} file(s)</h1></section>
+
+{% if rows %}
+<div class="card">
+  <table>
+    <thead>
+      <tr><th>File</th><th>Source</th><th>Screening</th><th>Top type</th><th>Conf.</th>
+          <th>Verdict</th><th>Quality</th></tr>
+    </thead>
+    <tbody>
+    {% for r in rows %}
+      <tr class="{{ 'row-bad' if r.verdict == 'abnormal-flag' else '' }}">
+        <td>{{ r.filename }}</td>
+        <td>{{ r.source }}</td>
+        <td>{{ r.screening }}</td>
+        <td>{{ r.top_type }}</td>
+        <td>{{ '%.1f%%' | format(r.top_type_conf * 100) if r.top_type_conf else '-' }}</td>
+        <td>{{ r.verdict }}</td>
+        <td>{{ 'OK' if r.quality_ok else r.quality_flags }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endif %}
+
+{% if errors %}
+<div class="card warn">
+  <strong>Failed files:</strong>
+  <ul>{% for e in errors %}<li>{{ e.filename }}: {{ e.error }}</li>{% endfor %}</ul>
+</div>
+{% endif %}
+
+<div class="card warn"><strong>Disclaimer.</strong> {{ disclaimer }}</div>
+{% endblock %}

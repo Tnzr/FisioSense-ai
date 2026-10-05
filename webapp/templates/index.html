@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block title %}CardiaSense — Analyze{% endblock %}
+{% block content %}
+<section class="hero">
+  <h1>Upload a recording, get an explained report</h1>
+  <p>Single file or a whole batch. The service routes the clip (heart / lung / mixed),
+     screens it (normal / abnormal), types it (10 heart / 6 lung classes), and renders
+     figures with plain-language health-awareness guidance.</p>
+</section>
+
+<form class="card" action="/analyze" method="post" enctype="multipart/form-data">
+  <div class="grid">
+    <div>
+      <label class="lbl">Audio files (.wav)</label>
+      <input type="file" name="files" accept=".wav,audio/*" multiple required>
+      <p class="hint">Tip: the dataset clips are 4 kHz mono WAV. Upload one for a full report, many for a batch table.</p>
+
+      <label class="lbl">Prediction heads</label>
+      <div class="checks">
+        {% for h in heads %}
+          <label class="chk"><input type="checkbox" name="heads" value="{{ h.key }}"
+            {% if h.key in loaded %}checked{% else %}disabled{% endif %}>
+            {{ h.label }}{% if h.key not in loaded %} <span class="bad">(unavailable)</span>{% endif %}</label>
+        {% endfor %}
+      </div>
+    </div>
+    <div>
+      <label class="lbl">Explanation depth</label>
+      <select name="explanation">
+        <option value="brief">Brief</option>
+        <option value="standard" selected>Standard</option>
+        <option value="detailed">Detailed (health awareness)</option>
+      </select>
+
+      <label class="lbl">Figures</label>
+      <select name="figures">
+        <option value="all" selected>All (waveform, processing, probabilities)</option>
+        <option value="key">Key only</option>
+        <option value="none">None (text only)</option>
+      </select>
+
+      <label class="chk"><input type="checkbox" name="audio_playback" value="true" checked> Embed audio playback</label>
+      <label class="chk"><input type="checkbox" name="include_disclaimer" value="true" checked> Show disclaimer</label>
+
+      <label class="chk"><input type="checkbox" name="temporal" value="true" checked>
+        Temporal sweep (probability vs time, paired with log-mel)</label>
+      <div class="row">
+        <label class="inline">Mode
+          <select name="temporal_mode">
+            <option value="multiscale" selected>Multi-scale</option>
+            <option value="single">Single window</option>
+          </select></label>
+        <label class="inline">Scales (s)
+          <input type="text" name="scales" value="1,3,15"></label>
+      </div>
+      <div class="row">
+        <label class="inline">Window (s)
+          <input type="number" name="window_s" value="3.0" min="0.5" max="10" step="0.5"></label>
+        <label class="inline">Hop (s)
+          <input type="number" name="hop_s" value="0.5" min="0.1" max="5" step="0.1"></label>
+      </div>
+
+      <button type="submit" class="primary">Analyze</button>
+    </div>
+  </div>
+</form>
+
+{% if errors %}
+<div class="card warn">
+  <strong>Some heads could not be loaded:</strong>
+  <ul>{% for k, v in errors.items() %}<li>{{ k }}: {{ v }}</li>{% endfor %}</ul>
+</div>
+{% endif %}
+
+<div class="card">
+  <h2>Learn by listening</h2>
+  <p>Play the <a href="/game">educational game</a> — identify real heart and lung sounds against dataset ground truth.</p>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}CardiaSense{% endblock %}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">🩺 CardiaSense <span class="tag">Inference as a Service</span></div>
+    <nav>
+      <a href="/">Analyze</a>
+      <a href="/game">Learn (game)</a>
+      <a href="/health" target="_blank">Status</a>
+    </nav>
+  </header>
+  <div class="disclaimer-banner">⚠️ {{ disclaimer }}</div>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  <footer>
+    CardiaSense AI · HLS-CMDS benchmark PoC · educational/research prototype — not a medical device.
+  </footer>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block title %}Report — {{ report.filename }}{% endblock %}
+{% block content %}
+{% if report.error %}
+  <div class="card warn"><h2>Could not analyze {{ report.filename }}</h2><pre>{{ report.error }}</pre></div>
+{% else %}
+<section class="report-head">
+  <h1>Report — {{ report.filename }}</h1>
+  <span class="pill {{ 'pill-bad' if report.verdict == 'abnormal-flag' else 'pill-ok' }}">
+    {{ 'abnormality flagged' if report.verdict == 'abnormal-flag' else 'no abnormality flagged' }}
+  </span>
+  <span class="muted">{{ report.quality.duration_s }} s · {{ report.sample_rate }} Hz ·
+    explanation: {{ report.explanation }} · figures: {{ report.figures_level }}</span>
+</section>
+
+{% if report.quality.flags %}
+<div class="card warn"><strong>Signal quality flags:</strong> {{ report.quality.flags | join('; ') }}</div>
+{% endif %}
+
+{% if report.audio_uri %}
+<div class="card"><audio id="report-audio" controls src="{{ report.audio_uri }}"></audio></div>
+{% endif %}
+
+{% if report.series %}
+<div class="card">
+  <h2>Live temporal view</h2>
+  <p class="muted">Head probabilities over a sliding window ({{ report.temporal.window_s }} s window,
+     {{ report.temporal.hop_s }} s hop), synced to the audio playhead.</p>
+  <label class="inline">Head
+    <select id="live-head">
+      {% for key, s in report.series.items() %}
+        <option value="{{ key }}">{{ s.label }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <canvas id="live-canvas" width="1000" height="280"></canvas>
+</div>
+<script id="series-data" type="application/json">{{ report.series | tojson }}</script>
+{% endif %}
+
+<div class="card">
+  <h2>Summary</h2>
+  <ul class="narrative">
+    {% for line in report.narrative %}<li>{{ line }}</li>{% endfor %}
+  </ul>
+</div>
+
+<div class="card">
+  <h2>Predictions</h2>
+  <table>
+    <thead><tr><th>Head</th><th>Prediction</th><th>Confidence</th><th>Ensemble</th></tr></thead>
+    <tbody>
+    {% for h in report.heads %}
+      <tr>
+        <td>{{ h.label }}</td>
+        <td><strong>{{ h.pred }}</strong></td>
+        <td>{{ '%.1f%%' | format(h.confidence * 100) }}</td>
+        <td>{{ h.n_models }} folds</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% if report.figures %}
+<div class="card">
+  <h2>Figures</h2>
+  <div class="figures">
+    {% for name, uri in report.figures.items() %}
+      <figure><img src="{{ uri }}" alt="{{ name }}"></figure>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+<div class="card warn"><strong>Disclaimer.</strong> {{ disclaimer }}</div>
+{% endif %}
+{% endblock %}
+{% block scripts %}{% if report.series %}<script src="/static/live.js"></script>{% endif %}{% endblock %}

@@ -1,0 +1,16 @@
+# CardiaSense HLS-CMDS benchmark campaign.
+# NOTE: canonical dependency pins live in ../pyproject.toml [project.dependencies]
+# (uv-managed .venv). This file mirrors them for pip-only installs; keep in sync.
+torch==2.14.1
+torchaudio==2.11.0
+torchvision==0.29.1
+numpy==2.4.6
+scipy==1.17.1
+pandas==3.0.6
+scikit-learn==1.9.1
+matplotlib==3.11.2
+librosa==0.11.0
+soundfile==0.14.0
+wandb==0.30.0
+tqdm==4.70.1
+python-dotenv==1.2.4

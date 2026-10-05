@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Environment
+.venv
+.venv/
+.env
+
+# Data (downloaded by setup.sh)
+data/
+
+# Campaign / generated artifacts
+runs/
+ml/runs/
+ml/demo/
+ml/report/
+wandb/
+*.pt
+*.onnx
+*.wav
+
+# OS
+.DS_Store

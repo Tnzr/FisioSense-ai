@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Learn — CardiaSense game{% endblock %}
+{% block content %}
+<section class="hero">
+  <h1>Learn by listening</h1>
+  <p>Identify real heart and lung sounds from the dataset. Every round is graded against
+     the ground-truth label and comes with an explanation.</p>
+</section>
+
+<div class="card">
+  <div class="grid">
+    <div>
+      <label class="lbl">Domain</label>
+      <select id="domain">
+        {% for key, d in domains.items() %}
+          <option value="{{ key }}">{{ d.label }}</option>
+        {% endfor %}
+      </select>
+      <button class="primary" id="start">New round</button>
+      <p class="hint">Score: <strong id="score">0</strong> / <span id="asked">0</span>
+         · streak: <strong id="streak">0</strong></p>
+    </div>
+    <div>
+      <p id="question" class="question">Pick a domain and start a round.</p>
+      <audio id="player" controls style="display:none"></audio>
+      <div id="options" class="options"></div>
+      <div id="feedback" class="feedback"></div>
+    </div>
+  </div>
+</div>
+
+<div class="card warn"><strong>Disclaimer.</strong> {{ disclaimer }}</div>
+{% endblock %}
+{% block scripts %}<script src="/static/game.js"></script>{% endblock %}

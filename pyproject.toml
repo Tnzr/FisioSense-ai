@@ -1,0 +1,23 @@
+[project]
+name = "cardiasense-hls-cmds"
+version = "0.1.0"
+description = "HLS-CMDS benchmark training campaign (CardiaSense AI PoC Stage 1)"
+requires-python = ">=3.11"
+dependencies = [
+    "torch==2.14.1",
+    "torchaudio==2.11.0",
+    "torchvision==0.29.1",
+    "numpy==2.4.6",
+    "scipy==1.17.1",
+    "pandas==3.0.6",
+    "scikit-learn==1.9.1",
+    "matplotlib==3.11.2",
+    "librosa==0.11.0",
+    "soundfile==0.14.0",
+    "wandb==0.30.0",
+    "tqdm==4.70.1",
+    "python-dotenv==1.2.4",
+]
+
+[tool.uv]
+package = false
