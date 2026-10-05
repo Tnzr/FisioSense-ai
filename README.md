@@ -90,6 +90,20 @@ reference lines:
 
 ---
 
+## Listen — sample clips
+
+Dataset recordings served directly from this repository (4 kHz, band-passed).
+Raw versions are in `docs/assets/audio/` too.
+
+| clip | playback |
+|---|---|
+| **Heart — normal** | <audio controls src="docs/assets/audio/heart_normal_filtered.wav"></audio> |
+| **Heart — abnormal** (atrial fibrillation) | <audio controls src="docs/assets/audio/heart_abnormal_filtered.wav"></audio> |
+| **Lung — normal** | <audio controls src="docs/assets/audio/lung_normal_filtered.wav"></audio> |
+| **Lung — wheeze** | <audio controls src="docs/assets/audio/lung_wheeze_filtered.wav"></audio> |
+
+---
+
 ## Web app — Inference-as-a-Service + Educational Game
 
 Upload one file for a full report or many for a batch table. The report routes
@@ -174,6 +188,23 @@ cd ml && SMOKE=1 ./scripts/run_sequential.sh
 | `webapp/` | FastAPI app: inference registry, report engine, game, templates, static |
 | `scripts/` | `make_assets.py`, `screenshot_walkthrough.py` |
 | `docs/` | strategy, architecture, tech stack, app spec, mobile-compute analysis, walkthrough |
+
+## Notebooks
+
+End-to-end notebooks (Jupyter, kernel `cardiasense`) covering the entire process:
+
+| notebook | covers |
+|---|---|
+| [`notebooks/01_dataset_exploration.ipynb`](notebooks/01_dataset_exploration.ipynb) | dataset, counts, class balance, embedded audio, spectrograms, signal quality |
+| [`notebooks/02_preprocessing_splits.ipynb`](notebooks/02_preprocessing_splits.ipynb) | band-pass DSP, augmentation, leakage-safe grouped splits |
+| [`notebooks/03_benchmark_training.ipynb`](notebooks/03_benchmark_training.ipynb) | classical baseline, deep smoke training, campaign/gate tables |
+| [`notebooks/04_report_embeddings_webapp.ipynb`](notebooks/04_report_embeddings_webapp.ipynb) | encoder embeddings, app-style report, README audio/screenshots |
+| [`notebooks/05_llm_integration.ipynb`](notebooks/05_llm_integration.ipynb) | personalized AI narrative, recommendations, optional live LLM |
+
+```bash
+.venv/bin/python -m ipykernel install --user --name cardiasense   # one-time (setup.sh does this)
+.venv/bin/python -m jupyter notebook notebooks/                   # or: jupyter lab
+```
 
 ## Documentation
 

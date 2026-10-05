@@ -1,0 +1,34 @@
+{
+  "heart_normal": {
+    "sample_id": "F_N_RC",
+    "label": "normal",
+    "task": "heart",
+    "scheme": "binary",
+    "raw": "docs/assets/audio/heart_normal_raw.wav",
+    "filtered": "docs/assets/audio/heart_normal_filtered.wav"
+  },
+  "heart_abnormal": {
+    "sample_id": "F_AF_A",
+    "label": "abnormal",
+    "task": "heart",
+    "scheme": "binary",
+    "raw": "docs/assets/audio/heart_abnormal_raw.wav",
+    "filtered": "docs/assets/audio/heart_abnormal_filtered.wav"
+  },
+  "lung_normal": {
+    "sample_id": "M_N_RUA",
+    "label": "normal",
+    "task": "lung",
+    "scheme": "binary",
+    "raw": "docs/assets/audio/lung_normal_raw.wav",
+    "filtered": "docs/assets/audio/lung_normal_filtered.wav"
+  },
+  "lung_wheeze": {
+    "sample_id": "M_W_LUA",
+    "label": "Wheezing",
+    "task": "lung",
+    "scheme": "6class",
+    "raw": "docs/assets/audio/lung_wheeze_raw.wav",
+    "filtered": "docs/assets/audio/lung_wheeze_filtered.wav"
+  }
+}

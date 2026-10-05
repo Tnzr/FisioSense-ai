@@ -45,6 +45,10 @@ if [ ! -x "$PY" ]; then
 fi
 echo "[setup] installing dependencies..."
 uv pip install --python "$PY" -r ml/requirements.txt -r webapp/requirements.txt
+[ -f notebooks/requirements.txt ] && uv pip install --python "$PY" -r notebooks/requirements.txt || true
+
+echo "[setup] registering the Jupyter kernel..."
+"$PY" -m ipykernel install --user --name cardiasense --display-name "Python 3 (cardiasense)" || echo "skip: jupyter not installed"
 
 # ---- 3. .env (used by config to find the dataset)
 if [ "${WRITE_ENV:-1}" = "1" ]; then

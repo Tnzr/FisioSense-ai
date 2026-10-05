@@ -23,6 +23,7 @@ wandb/
 *.pt
 *.onnx
 *.wav
+!docs/assets/audio/*.wav
 
 # OS
 .DS_Store
