@@ -23,6 +23,7 @@ import numpy as np
 import pandas as pd
 
 ML = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+REPO = os.path.dirname(ML)
 if ML not in sys.path:
     sys.path.insert(0, ML)
 
@@ -51,6 +52,12 @@ def _best(bench: pd.DataFrame, task: str, scheme: str) -> Optional[pd.Series]:
     if sub.empty:
         return None
     return sub.loc[sub["bal_acc"].idxmax()]
+
+
+def _asset(*parts: str) -> Optional[str]:
+    """Resolve a committed docs/ asset path (images used by README/walkthrough)."""
+    p = os.path.join(REPO, "docs", *parts)
+    return p if os.path.exists(p) else None
 
 
 def _fmt(v, pct=True):
@@ -366,6 +373,71 @@ def build_pages(binary_out: str, mc_out: str, data_dir: str, out_dir: str) -> Li
             ],
             "image": img,
         })
+
+    # ---- web app: Inference-as-a-Service results (synchronized timelines + multi-scale)
+    pages.append({
+        "title": "Web app — Inference-as-a-Service (product results)",
+        "paras": [
+            "The trained models are packaged as a web app (docs/WebApp.md): upload a recording and receive an "
+            "explained, parametrized report. The pages that follow reproduce the app's key output figures on "
+            "dataset clips — these are the same figures a user sees after upload.",
+            "App features: source routing, normal/abnormal screening, fine-grained typing, per-head post-softmax "
+            "probability charts, signal-quality flags, plain-language health-awareness narrative, batch analysis, "
+            "a JSON API (POST /api/analyze), and an educational listening game for training.",
+            "A one-clip, single-label view hides how the assessment evolves across breathing/cardiac cycles. The "
+            "app therefore sweeps the clip in a sliding window and renders synchronized inference timelines — "
+            "per-head probabilities (and confidence) against time, aligned with the input spectrogram.",
+        ],
+        "image": None,
+    })
+    timeline_specs = [
+        ("timeline_source.png", "Synchronized inference timeline — source routing (heart / lung / mixed)",
+         "Top: input log-mel spectrogram. Middle: stacked-area head probabilities over time. Bottom: confidence "
+         "line with a predicted-class ribbon. All share a time axis, so the routing decision is visible across "
+         "the whole recording, not just as a single label."),
+        ("timeline_heart_types.png", "Synchronized timeline — heart sound typing (10 classes)",
+         "The heart-type Transformer head swept in a sliding window. Short windows are ambiguous alone; the "
+         "stacked areas show where probability mass moves between the 10 murmur/rhythm classes over time, and "
+         "the whole-clip (macro) distribution is the most reliable reference."),
+        ("timeline_lung_types.png", "Synchronized timeline — lung sound typing (6 classes)",
+         "Six-class stacking for lung typing. Transient adventitious sounds (e.g. crackles) appear as brief "
+         "shifts in probability mass that a single full-clip histogram would hide."),
+        ("multiscale_source.png", "Multi-scale analysis — 1 s / 3 s / 15 s + whole clip",
+         "One probability panel per window scale, plus the whole-clip (macro) distribution as dashed reference "
+         "lines. Micro windows localise transients; long windows and the whole clip provide macro context. The "
+         "fused, length-weighted prediction is reported alongside the macro prediction. This is the app's "
+         "default temporal mode."),
+    ]
+    for name, title, desc in timeline_specs:
+        base = _asset("assets", "report")
+        p = os.path.join(base, name) if base else None
+        if not p or not os.path.isfile(p):
+            continue
+        pages.append({"title": title, "full": True, "paras": [desc], "image": p})
+
+    # ---- web app: usage walkthrough screenshots
+    walk = _asset("walkthrough")
+    if walk is not None:
+        pages.append({
+            "title": "Web app — usage walkthrough",
+            "paras": [
+                "The screenshots below correspond to the steps in docs/WALKTHROUGH.md: upload → explained report "
+                "→ synchronized timeline → batch analysis → educational game.",
+            ],
+            "image": None,
+        })
+        for name, caption in [
+            ("01_landing.png", "Upload (single or batch) with report parameters"),
+            ("02_report_summary.png", "Report summary — verdict, signal quality, narrative, prediction table"),
+            ("04_report_timeline.png", "Report — synchronized inference timeline"),
+            ("05_batch.png", "Batch analysis table"),
+            ("06_game.png", "Educational listening game"),
+        ]:
+            p = os.path.join(walk, name)
+            if os.path.isfile(p):
+                pages.append({"title": f"Web app walkthrough — {caption}", "full": True,
+                              "paras": ["Part of the step-by-step guide in docs/WALKTHROUGH.md."],
+                              "image": p})
 
     # ---- limitations
     pages.append({
