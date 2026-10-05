@@ -1,4 +1,4 @@
-# CardiaSense AI — Auscultation Benchmark, Inference-as-a-Service & Educational Game
+# FisioSense AI — Auscultation Benchmark, Inference-as-a-Service & Educational Game
 
 Stage-1 AI proof of concept for automated heart/lung sound analysis on the
 **[HLS-CMDS](https://doi.org/10.1109/IEEEDATA.2025.3566012)** dataset (Torabi,
@@ -118,13 +118,13 @@ App highlights:
 ## Quick start
 
 ```bash
-git clone git@github.com:Tnzr/cardiasense-ai.git
-cd cardiasense-ai
+git clone git@github.com:Tnzr/FisioSense-ai.git
+cd FisioSense-ai
 ./setup.sh          # venv + deps + downloads HLS-CMDS (37.8 MB) from Zenodo if absent
 ```
 
 `setup.sh` creates the venv, installs dependencies, downloads the dataset from
-its Zenodo source if needed, writes `.env` (`CARDIASENSE_DATA_DIR`), and
+its Zenodo source if needed, writes `.env` (`FisioSense_DATA_DIR`), and
 **verifies the manifests** (`sound=535 heart=195 lung=195`).
 
 ```bash
