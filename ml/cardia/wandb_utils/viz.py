@@ -305,3 +305,45 @@ def multiscale_fig(spec, duration, scale_series, macro_probs, classes, title: st
     axes[-1].set_xlabel("time (s)")
     fig.tight_layout()
     return fig
+
+
+def inference_timeline_fig(spec, duration, times, probs, classes, title: str):
+    """Synchronized inference timeline sharing one time axis:
+      1) input log-mel spectrogram
+      2) stacked-area head probabilities over time
+      3) confidence (max probability) line + predicted-class ribbon
+    """
+    probs = np.asarray(probs, dtype=float)
+    times = np.asarray(times, dtype=float)
+    n = len(classes)
+    cmap = plt.get_cmap("tab20")
+    colors = [cmap(c % 20) for c in range(n)]
+    fig, axes = plt.subplots(3, 1, figsize=(12, 8), sharex=True,
+                             gridspec_kw={"height_ratios": [1.0, 1.1, 0.7]})
+    # 1) input spectrogram
+    im = axes[0].imshow(spec, aspect="auto", origin="lower", cmap="magma",
+                        extent=[0, duration, 0, spec.shape[0]])
+    axes[0].set_ylabel("mel bin")
+    axes[0].set_title(title)
+    fig.colorbar(im, ax=axes[0], fraction=0.046, pad=0.02).set_label("log power")
+    # 2) stacked-area probabilities
+    axes[1].stackplot(times, [probs[:, c] for c in range(n)], labels=classes, colors=colors, alpha=0.9)
+    axes[1].set_ylim(0, 1)
+    axes[1].set_ylabel("probability (stacked)")
+    axes[1].legend(ncol=2, fontsize=7, loc="upper right")
+    # 3) confidence line + argmax ribbon
+    conf = probs.max(axis=1)
+    axes[2].plot(times, conf, color="#e8eef5", lw=1.8)
+    axes[2].fill_between(times, 0, conf, color="#4cc2c4", alpha=0.25)
+    axes[2].set_ylim(0, 1)
+    axes[2].set_ylabel("confidence")
+    axes[2].set_xlabel("time (s)")
+    ax2 = axes[2].twinx()
+    ax2.set_yticks([])
+    ax2.set_ylim(0, 1)
+    for i in range(len(times)):
+        c = int(probs[i].argmax())
+        w = (times[1] - times[0]) if len(times) > 1 else 1.0
+        ax2.axvspan(times[i] - w / 2, times[i] + w / 2, color=colors[c], alpha=0.12)
+    fig.tight_layout()
+    return fig

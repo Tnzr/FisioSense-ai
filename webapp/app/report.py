@@ -161,6 +161,12 @@ def analyze_waveform(wav: torch.Tensor, sr: int, filename: str, options: ReportO
                     viz.temporal_paired_fig(
                         spec_h, duration, ser["times"], ser["probs"], h["classes"],
                         f"{h['label']} — probability vs time (window {options.window_s}s, hop {options.hop_s}s)"))
+            # synchronized inference timeline (spectrogram + stacked probs + confidence)
+            ser_live = report["series"][h["key"]]
+            report["figures"][f"timeline_{h['key']}"] = fig_to_data_uri(
+                viz.inference_timeline_fig(
+                    spec_h, duration, ser_live["times"], ser_live["probs"], h["classes"],
+                    f"{h['label']} — synchronized inference timeline"))
 
     # narrative
     source = next((h for h in report["heads"] if h["kind"] == "source"), None)

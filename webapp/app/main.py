@@ -204,3 +204,40 @@ def game_audio(sample_id: str, task: str = "heart", scheme: str = "10class"):
     if not path:
         raise HTTPException(status_code=404, detail="clip not found")
     return FileResponse(path, media_type="audio/wav")
+
+
+@app.get("/demo/report", response_class=HTMLResponse)
+def demo_report(request: Request, sample_id: str = "", task: str = "sound", scheme: str = "binary",
+                heads: str = "", temporal_mode: str = "multiscale", explanation: str = "detailed",
+                figures: str = "all"):
+    """Render a full report for a built-in dataset clip (shareable + screenshot-friendly)."""
+    if not sample_id:
+        manifest = game._manifest(task, scheme)
+        sample_id = str(manifest.iloc[0]["sample_id"])
+    path = game.resolve_audio_path(sample_id, task, scheme)
+    if not path:
+        raise HTTPException(status_code=404, detail=f"sample {sample_id} not found for {task}/{scheme}")
+    opts = _opts([h for h in heads.split(",") if h] or list(report.DEFAULT_HEADS),
+                 explanation, figures, True, True, True, 3.0, 0.5, temporal_mode, "1,3,15")
+    rep = report.analyze_file(path, opts)
+    rep["audio_uri"] = _audio_data_uri(path)
+    rep["demo"] = {"sample_id": sample_id, "task": task, "scheme": scheme}
+    return templates.TemplateResponse(request, "report.html", {"report": rep, "disclaimer": DISCLAIMER})
+
+
+@app.get("/demo/batch", response_class=HTMLResponse)
+def demo_batch(request: Request, n: int = 4):
+    """Render a batch table over a few built-in dataset clips."""
+    opts = _opts(list(report.DEFAULT_HEADS), "standard", "all", True, False, False)
+    picks = [("sound", "binary"), ("heart", "binary"), ("lung", "binary"), ("heart", "10class"), ("lung", "6class")]
+    results = []
+    for task, scheme in picks[: max(1, min(n, len(picks)))]:
+        manifest = game._manifest(task, scheme)
+        sid = str(manifest.iloc[0]["sample_id"])
+        path = game.resolve_audio_path(sid, task, scheme)
+        if path:
+            results.append(report.analyze_file(path, opts))
+    rows = [report.batch_row(r) for r in results]
+    return templates.TemplateResponse(request, "batch.html", {
+        "rows": rows, "errors": [], "n": len(rows), "disclaimer": DISCLAIMER,
+    })
