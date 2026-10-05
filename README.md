@@ -113,6 +113,26 @@ App highlights:
 - **Game mode** — scored ground-truth listening rounds with explanations.
 - **JSON API** — `POST /api/analyze`, `GET /api/game/round`, `POST /api/game/answer`.
 
+## Personalized AI narrative (LLM)
+
+`POST /api/llm/report` + the `patient_context` / `ai_narrative` report options
+generate a personalized narrative with **medical / diet / environment**
+recommendations grounded in the findings, plus a follow-up chat. Works out of
+the box with an offline synthesizer; enable an OpenAI-compatible LLM (or local
+Ollama) with `CARDIASENSE_LLM_*` env vars. See
+[`docs/LLM_Integration.md`](docs/LLM_Integration.md).
+
+**Research directions** (documented in `docs/LLM_Integration.md`):
+
+- **Token/embedding architecture** — the audio Transformer's encoder already
+  organises patch tokens and class embeddings; `encode()` + an embedding
+  extractor make them the interface to an LLM (see the
+  [class-embedding similarity](docs/assets/report/embeddings_heart.png)).
+- **Whole-breathing-cycle modeling** — short snippets are ambiguous; the app's
+  macro pass already uses the full 15 s clip, and the roadmap adds cycle
+  segmentation, long-context encoders and cycle-aware training for proper
+  whole-cycle diagnosis.
+
 ---
 
 ## Quick start
@@ -161,6 +181,7 @@ cd ml && SMOKE=1 ./scripts/run_sequential.sh
 - [`docs/ProductComputeArchitecture.md`](docs/ProductComputeArchitecture.md) — tiers, edge/cloud, app layer
 - [`docs/TechStack.md`](docs/TechStack.md) — stack choices + migration path
 - [`docs/WebApp.md`](docs/WebApp.md) — app spec (IaaS + game, multi-scale)
+- [`docs/LLM_Integration.md`](docs/LLM_Integration.md) — personalized AI reports + research directions
 - [`docs/MobileCompute.md`](docs/MobileCompute.md) — measured model profile, phone latency, quantization
 - [`docs/WALKTHROUGH.md`](docs/WALKTHROUGH.md) — instructional usage walkthrough
 - [`docs/RnD_PrototypingPlan.md`](docs/RnD_PrototypingPlan.md) — R&D plan

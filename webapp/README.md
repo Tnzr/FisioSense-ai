@@ -16,6 +16,11 @@ full specification.
   explanation after every answer.
 - **JSON API:** `POST /api/analyze`, `GET /api/game/round`,
   `POST /api/game/answer` for programmatic / IaaS use.
+- **Personalized AI narrative (LLM):** `POST /api/llm/report` and the
+  `patient_context` / `ai_narrative` report options produce a personalized
+  report with medical / diet / environment recommendations and a follow-up chat
+  (offline synthesizer by default; OpenAI-compatible LLM when configured).
+  See `../docs/LLM_Integration.md`.
 
 ## Run
 
@@ -34,6 +39,9 @@ Environment overrides:
 | `CARDIASENSE_DATA_DIR` | HLS-CMDS path | dataset root (game + demo) |
 | `CARDIASENSE_BINARY_OUT` | `ml/runs` | binary campaign checkpoints |
 | `CARDIASENSE_MC_OUT` | `.../cardiasense-runs/mc` | multiclass checkpoints |
+| `CARDIASENSE_LLM_API_KEY` | *(unset)* | enables the OpenAI-compatible LLM narrative |
+| `CARDIASENSE_LLM_BASE_URL` | `https://api.openai.com/v1` | any compatible endpooint (e.g. local Ollama) |
+| `CARDIASENSE_LLM_MODEL` | `gpt-4o-mini` | LLM model name |
 
 ## Model heads
 

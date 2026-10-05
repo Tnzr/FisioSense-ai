@@ -9,6 +9,7 @@ import numpy as np
 import torch
 
 from . import config
+from . import llm as llm_mod
 from .inference import fig_to_data_uri, get_registry, head_prob_fig
 
 DEFAULT_HEADS = ["source", "heart_binary", "heart_types", "lung_binary", "lung_types"]
@@ -26,6 +27,8 @@ class ReportOptions:
     hop_s: float = 0.5
     temporal_mode: str = "single"  # single | multiscale
     scales: List[float] = field(default_factory=lambda: [1.0, 3.0, 15.0])
+    patient_context: str = ""
+    ai_narrative: bool = True
 
 
 def _quality(wav: torch.Tensor, sr: int) -> Dict:
@@ -196,6 +199,16 @@ def analyze_waveform(wav: torch.Tensor, sr: int, filename: str, options: ReportO
         report["verdict"] = "no-flag"
         report["narrative"].insert(0, "Summary: no screening head flagged an abnormality. This does not rule "
                                       "out disease.")
+
+    # AI personalized narrative (LLM when configured, else offline synthesizer)
+    findings_payload = [
+        {k: h[k] for k in ("key", "label", "kind", "pred", "confidence", "classes", "probs")}
+        for h in report["heads"]
+    ]
+    report["findings_payload"] = findings_payload
+    report["patient_context"] = options.patient_context
+    if options.ai_narrative:
+        report["ai_narrative"] = llm_mod.generate_narrative(findings_payload, options.patient_context)
 
     report.pop("_filtered", None)
     return report

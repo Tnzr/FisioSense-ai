@@ -45,6 +45,38 @@
   </ul>
 </div>
 
+{% if report.ai_narrative %}
+<div class="card" id="ai-narrative">
+  <h2>Personalized AI narrative
+    <span class="pill {{ 'pill-ok' if report.ai_narrative.provider == 'synthesizer' else 'pill-bad' }}">
+      {{ report.ai_narrative.provider }} · {{ report.ai_narrative.model }}</span>
+  </h2>
+  <p class="ai-summary">{{ report.ai_narrative.summary }}</p>
+  <h3>Findings</h3>
+  <ul>{% for f in report.ai_narrative.findings %}<li>{{ f }}</li>{% endfor %}</ul>
+  <h3>Recommendations</h3>
+  <div class="recs">
+    <div><strong>Medical</strong><ul>{% for r in report.ai_narrative.recommendations.medical %}<li>{{ r }}</li>{% endfor %}</ul></div>
+    <div><strong>Diet</strong><ul>{% for r in report.ai_narrative.recommendations.diet %}<li>{{ r }}</li>{% endfor %}</ul></div>
+    <div><strong>Environment</strong><ul>{% for r in report.ai_narrative.recommendations.environment %}<li>{{ r }}</li>{% endfor %}</ul></div>
+  </div>
+  <h3>Next steps</h3>
+  <ul>{% for s in report.ai_narrative.next_steps %}<li>{{ s }}</li>{% endfor %}</ul>
+  <p class="muted">{{ report.ai_narrative.disclaimer }}</p>
+
+  <h3>Ask a follow-up</h3>
+  <div class="chat">
+    <div id="chat-log" class="chat-log"></div>
+    <div class="chat-row">
+      <input id="chat-input" placeholder="Ask about your recording or recommendations...">
+      <button id="chat-send" class="primary">Ask</button>
+    </div>
+  </div>
+</div>
+<span id="patient-context-val" style="display:none">{{ report.patient_context }}</span>
+<script id="findings-data" type="application/json">{{ report.findings_payload | tojson }}</script>
+{% endif %}
+
 <div class="card">
   <h2>Predictions</h2>
   <table>
@@ -76,4 +108,4 @@
 <div class="card warn"><strong>Disclaimer.</strong> {{ disclaimer }}</div>
 {% endif %}
 {% endblock %}
-{% block scripts %}{% if report.series %}<script src="/static/live.js"></script>{% endif %}{% endblock %}
+{% block scripts %}{% if report.series %}<script src="/static/live.js"></script>{% endif %}{% if report.ai_narrative %}<script src="/static/llm.js"></script>{% endif %}{% endblock %}

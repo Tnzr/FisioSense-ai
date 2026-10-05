@@ -71,6 +71,30 @@ class ASTSmall(nn.Module):
         cls = self.norm(out[:, 0])
         return self.head(cls)
 
+    def encode(self, x: torch.Tensor):
+        """Encoder-only pass for embedding extraction / LLM tokenization.
+
+        Returns ``(patch_tokens, cls_embedding)``:
+        * patch_tokens: (B, T, d_model) — the per-patch audio tokens the head
+          organises during training;
+        * cls_embedding: (B, d_model) — the pooled class embedding.
+
+        These vectors are the natural interface for a downstream language model:
+        the encoder already arranges patch tokens and class embeddings in a
+        shared, ordered space, so a frozen encoder + linear projection can map
+        them into an LLM's embedding dimension, or the patch-token sequence can
+        be consumed like input tokens by a decoder-only model.
+        """
+        tokens = self.patch_embed(x)
+        b = tokens.shape[0]
+        seq = tokens.shape[1] + 1
+        pos = self._position_embedding(seq, x.device)
+        tokens = torch.cat([self.cls_token.expand(b, -1, -1), tokens], dim=1)
+        tokens = self.pos_drop(tokens + pos)
+        out = self.blocks(tokens)
+        out = self.norm(out)
+        return out[:, 1:], out[:, 0]
+
 
 def build_transformer(cfg: Config, num_classes: int) -> nn.Module:
     return ASTSmall(

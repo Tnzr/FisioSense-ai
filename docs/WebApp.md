@@ -116,6 +116,26 @@ Batch mode: a table of all files (routed source, screening, top type,
 confidence, quality flags) with drill-down links to each full report and a
 downloadable CSV.
 
+## 5B. Personalized AI narrative (LLM integration)
+
+Report generation ends with an optional **AI narrative**: the structured head
+probabilities are turned into a plain-language report personalized to the
+user's stated health context and conversation, with **medical / diet /
+environment** recommendations. Implementation is provider-agnostic
+(`webapp/app/llm.py`):
+
+- **LLMClient** — OpenAI-compatible `chat/completions`, enabled by
+  `CARDIASENSE_LLM_*` env vars (also works with local Ollama).
+- **LLMSynthesizer** — deterministic offline fallback with the same output
+  shape, so the app works and stays testable without any API key.
+
+The output JSON (`summary`, `findings`, `recommendations{medical,diet,environment}`,
+`next_steps`, `provider`, `model`, `disclaimer`) is rendered in the report and
+powers a follow-up chat (`POST /api/llm/report`). Guardrails: educational
+output, never a diagnosis, PHI only when the user opts in. Research directions
+— a token/embedding audio-encoder architecture and whole-breathing-cycle
+modeling — are documented in `docs/LLM_Integration.md`.
+
 ## 5A. Temporal and multi-scale analysis
 
 A whole recording spans several breathing/cardiac cycles, so a single

@@ -20,6 +20,7 @@ WEBAPP = os.path.dirname(HERE)
 
 from . import game  # noqa: E402
 from . import inference, report  # noqa: E402
+from . import llm as llm_mod  # noqa: E402
 from .config import DISCLAIMER  # noqa: E402
 
 app = FastAPI(title="CardiaSense — Inference as a Service", version="0.1.0")
@@ -34,7 +35,8 @@ def _startup() -> None:
 
 def _opts(heads: List[str], explanation: str, figures: str, disclaimer: bool, audio: bool,
           temporal: bool = False, window_s: float = 3.0, hop_s: float = 0.5,
-          temporal_mode: str = "single", scales: str = "1,3,15") -> report.ReportOptions:
+          temporal_mode: str = "single", scales: str = "1,3,15",
+          patient_context: str = "", ai_narrative: bool = True) -> report.ReportOptions:
     valid = [h for h in heads if h in report.DEFAULT_HEADS] or list(report.DEFAULT_HEADS)
     try:
         scale_list = [max(0.5, min(float(s), 60.0)) for s in str(scales).split(",") if s.strip()]
@@ -53,6 +55,8 @@ def _opts(heads: List[str], explanation: str, figures: str, disclaimer: bool, au
         hop_s=max(0.1, min(float(hop_s or 0.5), 5.0)),
         temporal_mode=temporal_mode if temporal_mode in ("single", "multiscale") else "single",
         scales=scale_list,
+        patient_context=patient_context,
+        ai_narrative=ai_narrative,
     )
 
 
@@ -112,9 +116,11 @@ async def analyze(
     hop_s: float = Form(0.5),
     temporal_mode: str = Form("single"),
     scales: str = Form("1,3,15"),
+    patient_context: str = Form(""),
+    ai_narrative: bool = Form(True),
 ):
     opts = _opts(heads, explanation, figures, include_disclaimer, audio_playback, temporal, window_s, hop_s,
-                 temporal_mode, scales)
+                 temporal_mode, scales, patient_context, ai_narrative)
     results = []
     for up in files:
         path = _save_upload(up)
@@ -154,10 +160,12 @@ async def api_analyze(
     hop_s: float = Form(0.5),
     temporal_mode: str = Form("single"),
     scales: str = Form("1,3,15"),
+    patient_context: str = Form(""),
+    ai_narrative: bool = Form(True),
 ):
     """Programmatic Inference-as-a-Service endpoint (JSON)."""
     opts = _opts([h for h in heads.split(",") if h], explanation, figures, True, False,
-                 temporal, window_s, hop_s, temporal_mode, scales)
+                 temporal, window_s, hop_s, temporal_mode, scales, patient_context, ai_narrative)
     out = []
     for up in files:
         path = _save_upload(up)
@@ -172,6 +180,17 @@ async def api_analyze(
             except OSError:
                 pass
     return JSONResponse({"count": len(out), "results": out})
+
+
+@app.post("/api/llm/report")
+async def api_llm_report(payload: dict) -> JSONResponse:
+    """Personalize an auscultation report from findings + patient context and
+    optional conversation history. Returns the same structured narrative shape
+    whether the LLM is configured or the offline synthesizer is used."""
+    findings = payload.get("findings") or []
+    ctx = str(payload.get("patient_context") or "")
+    history = payload.get("history") or []
+    return JSONResponse(llm_mod.generate_narrative(findings, ctx, history))
 
 
 @app.get("/game", response_class=HTMLResponse)
