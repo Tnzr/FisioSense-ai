@@ -1,0 +1,40 @@
+name = "asculto-api"
+main = "src/index.ts"
+compatibility_date = "2026-10-01"
+compatibility_flags = ["nodejs_compat"]
+
+# --- bindings (ids filled by infra/terraform/cloudflare) ----------------------
+[[r2_buckets]]
+binding = "AUDIO"
+bucket_name = "asculto-audio"
+
+[[r2_buckets]]
+binding = "REPORTS"
+bucket_name = "asculto-reports"
+
+[[kv_namespaces]]
+binding = "QUOTAS"
+id = "REPLACE_WITH_KV_ID"
+
+[[kv_namespaces]]
+binding = "USERS"
+id = "REPLACE_WITH_KV_ID"
+
+[[queues.producers]]
+binding = "JOBS"
+queue = "asculto-jobs"
+
+[[queues.consumers]]
+queue = "asculto-jobs"
+max_batch_size = 1
+max_batch_timeout = 5
+
+[vars]
+ENVIRONMENT = "prod"
+INFERENCE_URL = "https://asculto-worker.example.internal"
+R2_ACCOUNT_ID = "REPLACE"
+# secrets (set via `wrangler secret put`): STRIPE_SECRET_KEY,
+# STRIPE_WEBHOOK_SECRET, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY, DATABASE_URL
+
+# [env.staging]
+# ...

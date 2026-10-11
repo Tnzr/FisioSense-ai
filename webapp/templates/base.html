@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title %}CardiaSense{% endblock %}</title>
+  <title>{% block title %}Asculto{% endblock %}</title>
   <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
   <header class="topbar">
-    <div class="brand">🩺 CardiaSense <span class="tag">Inference as a Service</span></div>
+    <div class="brand">🩺 Asculto <span class="tag">Inference as a Service</span></div>
     <nav>
+      <a href="/course">Course</a>
       <a href="/">Analyze</a>
       <a href="/game">Learn (game)</a>
       <a href="/health" target="_blank">Status</a>
@@ -20,7 +21,8 @@
     {% block content %}{% endblock %}
   </main>
   <footer>
-    CardiaSense AI · HLS-CMDS benchmark PoC · educational/research prototype — not a medical device.
+    Asculto AI · HLS-CMDS benchmark PoC · educational/research prototype — not a medical device.
+    <p class="credits">Data: HLS-CMDS (Torabi, Shirani &amp; Reilly, 2025; DOI 10.1109/IEEEDATA.2025.3566012; Zenodo 15376628) — CC BY 4.0. See <a href="https://github.com/Tnzr/cardiasense-ai/blob/main/docs/DatasetLicenses.md">DatasetLicenses</a>.</p>
   </footer>
   {% block scripts %}{% endblock %}
 </body>

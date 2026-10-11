@@ -1,4 +1,4 @@
-# CardiaSense HLS-CMDS benchmark campaign.
+# Asculto HLS-CMDS benchmark campaign.
 # NOTE: canonical dependency pins live in ../pyproject.toml [project.dependencies]
 # (uv-managed .venv). This file mirrors them for pip-only installs; keep in sync.
 torch==2.14.1

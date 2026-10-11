@@ -105,6 +105,7 @@
 </div>
 {% endif %}
 
+{% if report.credits %}<div class="card"><strong>Data credit.</strong> {{ report.credits }}</div>{% endif %}
 <div class="card warn"><strong>Disclaimer.</strong> {{ disclaimer }}</div>
 {% endif %}
 {% endblock %}

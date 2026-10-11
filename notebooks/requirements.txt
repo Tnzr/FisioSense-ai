@@ -1,4 +1,4 @@
-# Jupyter stack for the CardiaSense notebooks (ml + webapp deps are shared)
+# Jupyter stack for the Asculto notebooks (ml + webapp deps are shared)
 ipykernel==7.4.0
 nbformat==5.11.1
 nbconvert==7.17.1

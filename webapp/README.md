@@ -1,4 +1,4 @@
-# CardiaSense Web App — Inference-as-a-Service & Educational Interactive
+# Asculto Web App — Inference-as-a-Service & Educational Interactive
 
 A FastAPI app that serves the trained HLS-CMDS models as an explained inference
 service and a ground-truth-backed listening game. See `../docs/WebApp.md` for the
@@ -35,13 +35,13 @@ Environment overrides:
 
 | var | default | purpose |
 |---|---|---|
-| `CARDIASENSE_DEVICE` | `cpu` | `cuda` for GPU inference |
-| `CARDIASENSE_DATA_DIR` | HLS-CMDS path | dataset root (game + demo) |
-| `CARDIASENSE_BINARY_OUT` | `ml/runs` | binary campaign checkpoints |
-| `CARDIASENSE_MC_OUT` | `.../cardiasense-runs/mc` | multiclass checkpoints |
-| `CARDIASENSE_LLM_API_KEY` | *(unset)* | enables the OpenAI-compatible LLM narrative |
-| `CARDIASENSE_LLM_BASE_URL` | `https://api.openai.com/v1` | any compatible endpooint (e.g. local Ollama) |
-| `CARDIASENSE_LLM_MODEL` | `gpt-4o-mini` | LLM model name |
+| `ASCULTO_DEVICE` | `cpu` | `cuda` for GPU inference |
+| `ASCULTO_DATA_DIR` | HLS-CMDS path | dataset root (game + demo) |
+| `ASCULTO_BINARY_OUT` | `ml/runs` | binary campaign checkpoints |
+| `ASCULTO_MC_OUT` | `.../cardiasense-runs/mc` | multiclass checkpoints |
+| `ASCULTO_LLM_API_KEY` | *(unset)* | enables the OpenAI-compatible LLM narrative |
+| `ASCULTO_LLM_BASE_URL` | `https://api.openai.com/v1` | any compatible endpooint (e.g. local Ollama) |
+| `ASCULTO_LLM_MODEL` | `gpt-4o-mini` | LLM model name |
 
 ## Model heads
 

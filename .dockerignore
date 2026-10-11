@@ -1,0 +1,17 @@
+# Build context for all images is the repo root; keep it small.
+.git
+.venv
+.kilo
+data
+runs
+ml/runs
+ml/demo
+ml/report
+wandb
+notebooks
+docs
+**/__pycache__
+*.pyc
+*.pt
+*.onnx
+*.wav

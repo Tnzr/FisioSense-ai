@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Course — Learn auscultation{% endblock %}
+{% block content %}
+<section class="hero">
+  <h1>Learn auscultation with real heart &amp; lung sounds</h1>
+  <p>A free, structured training course. Each module has short lessons, curated
+     listening examples from the HLS-CMDS dataset, practice rounds, and a
+     checkpoint quiz. Pass every checkpoint to earn a certificate. No account
+     needed — your progress is stored in your browser.</p>
+  <div class="cta-row">
+    <a class="btn primary" href="/course/{{ modules[0].id }}">Start the course →</a>
+    <a class="btn" href="/">Analyze a recording</a>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Course modules</h2>
+  <p class="hint">Progress: <strong id="progress-count">0</strong> / {{ modules|length }} completed</p>
+  <ol class="module-list">
+    {% for m in modules %}
+      <li class="module-card" data-module="{{ m.id }}">
+        <div class="module-body">
+          <span class="badge-done" hidden>✓ done</span>
+          <h3><a href="/course/{{ m.id }}">{{ loop.index }}. {{ m.title }}</a></h3>
+          <p class="muted">{{ m.summary }}</p>
+        </div>
+        <a class="btn" href="/course/{{ m.id }}">Open module</a>
+      </li>
+    {% endfor %}
+  </ol>
+</section>
+
+<div class="card warn"><strong>Disclaimer.</strong> {{ disclaimer }}</div>
+{% endblock %}
+{% block scripts %}<script src="/static/course.js"></script>{% endblock %}

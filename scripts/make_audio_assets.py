@@ -2,6 +2,11 @@
 """Export a compact set of demo clips (raw + band-passed) for the README's
 embedded-audio section into docs/assets/audio/.
 
+The clips are re-encoded at PLAYBACK_SR (22.05 kHz) with gentle compression:
+the source recordings are 4 kHz WAVs which play fine in Audacity but decode as
+silence in HTML5 `<audio>` and many native players, and their peak-normalised
+heart sounds are quiet on laptop speakers.
+
 Usage:
   python scripts/make_audio_assets.py
 """
@@ -15,6 +20,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(
 import numpy as np
 import soundfile as sf
 import torch
+import torchaudio
 
 from cardia.config import Config
 from cardia.data.hls_cmds import build_task_manifest
@@ -25,7 +31,33 @@ OUT = os.path.join(ROOT, "docs", "assets", "audio")
 os.makedirs(OUT, exist_ok=True)
 cfg = Config()
 
-DATA = os.environ.get("CARDIASENSE_DATA_DIR", cfg.data_dir)
+DATA = os.environ.get("ASCULTO_DATA_DIR", cfg.data_dir)
+
+PLAYBACK_SR = 22050
+
+
+def to_playback(w, sr, target_db=-14.0, thresh_db=-24.0, ratio=3.0):
+    """Lift quiet demo clips and re-encode at a standard sample rate.
+
+    Compression (3:1 above -24 dBFS) + gain to ~-14 dBFS RMS + soft-limit
+    make the peak-normalised heart sounds clearly audible; resampling to
+    22.05 kHz avoids the silent playback of 4 kHz WAVs in strict decoders.
+    """
+    x = w.numpy().astype(np.float64)
+    thresh = 10 ** (thresh_db / 20)
+    amp = np.abs(x)
+    over = amp > thresh
+    y = x.copy()
+    y[over] = np.sign(x[over]) * (thresh + (amp[over] - thresh) / ratio)
+    rms = np.sqrt(np.mean(y ** 2))
+    y = y * (10 ** ((target_db - 20 * np.log10(rms + 1e-12)) / 20))
+    y = np.tanh(y * 1.3) / np.tanh(1.3)
+    peak = np.max(np.abs(y))
+    if peak > 0.97:
+        y = y * 0.97 / peak
+    y = torchaudio.functional.resample(torch.from_numpy(y.astype(np.float32)), sr, PLAYBACK_SR).numpy()
+    return y, PLAYBACK_SR
+
 
 # (name, task, scheme, label-filter, sample_id-hint)
 PICKS = [
@@ -56,13 +88,14 @@ for name, task, scheme, label, hint in PICKS:
     filt = preprocess(row["file_path"], cfg)
     for ext, w in (("raw", raw), ("filtered", filt)):
         path = os.path.join(OUT, f"{name}_{ext}.wav")
-        sf.write(path, w.numpy(), cfg.sample_rate)
+        w, sr = to_playback(w, cfg.sample_rate)
+        sf.write(path, w, sr)
         manifest[name] = {
             "sample_id": row["sample_id"], "label": str(row["task_label"]),
             "task": task, "scheme": scheme, "raw": f"docs/assets/audio/{name}_raw.wav",
             "filtered": f"docs/assets/audio/{name}_filtered.wav",
         }
-        print(f"[audio] {path} ({os.path.getsize(path)//1024} KB)")
+        print(f"[audio] {path} ({os.path.getsize(path)//1024} KB @ {sr} Hz)")
 
 import json
 

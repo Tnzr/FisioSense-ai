@@ -1,4 +1,4 @@
-# FisioSense AI — Auscultation Benchmark, Inference-as-a-Service & Educational Game
+# Asculto — Auscultation Benchmark, Inference-as-a-Service & Educational Game
 
 Stage-1 AI proof of concept for automated heart/lung sound analysis on the
 **[HLS-CMDS](https://doi.org/10.1109/IEEEDATA.2025.3566012)** dataset (Torabi,
@@ -92,15 +92,17 @@ reference lines:
 
 ## Listen — sample clips
 
-Dataset recordings served directly from this repository (4 kHz, band-passed).
-Raw versions are in `docs/assets/audio/` too.
+Dataset recordings served directly from this repository. Clips are re-encoded
+to 22.05 kHz with light compression so they play in browsers and native
+players (the original 4 kHz WAVs decode as silence in HTML5 `<audio>` and many
+system players); raw versions are in `docs/assets/audio/` too.
 
 | clip | playback |
 |---|---|
-| **Heart — normal** | <audio controls src="docs/assets/audio/heart_normal_filtered.wav"></audio> |
-| **Heart — abnormal** (atrial fibrillation) | <audio controls src="docs/assets/audio/heart_abnormal_filtered.wav"></audio> |
-| **Lung — normal** | <audio controls src="docs/assets/audio/lung_normal_filtered.wav"></audio> |
-| **Lung — wheeze** | <audio controls src="docs/assets/audio/lung_wheeze_filtered.wav"></audio> |
+| **Heart — normal** | <audio controls preload="none" src="https://raw.githubusercontent.com/Tnzr/FisioSense-ai/main/docs/assets/audio/heart_normal_filtered.wav"></audio> |
+| **Heart — abnormal** (atrial fibrillation) | <audio controls preload="none" src="https://raw.githubusercontent.com/Tnzr/FisioSense-ai/main/docs/assets/audio/heart_abnormal_filtered.wav"></audio> |
+| **Lung — normal** | <audio controls preload="none" src="https://raw.githubusercontent.com/Tnzr/FisioSense-ai/main/docs/assets/audio/lung_normal_filtered.wav"></audio> |
+| **Lung — wheeze** | <audio controls preload="none" src="https://raw.githubusercontent.com/Tnzr/FisioSense-ai/main/docs/assets/audio/lung_wheeze_filtered.wav"></audio> |
 
 ---
 
@@ -133,7 +135,7 @@ App highlights:
 generate a personalized narrative with **medical / diet / environment**
 recommendations grounded in the findings, plus a follow-up chat. Works out of
 the box with an offline synthesizer; enable an OpenAI-compatible LLM (or local
-Ollama) with `CARDIASENSE_LLM_*` env vars. See
+Ollama) with `ASCULTO_LLM_*` env vars. See
 [`docs/LLM_Integration.md`](docs/LLM_Integration.md).
 
 **Research directions** (documented in `docs/LLM_Integration.md`):
@@ -152,13 +154,13 @@ Ollama) with `CARDIASENSE_LLM_*` env vars. See
 ## Quick start
 
 ```bash
-git clone git@github.com:Tnzr/FisioSense-ai.git
-cd FisioSense-ai
+git clone git@github.com:Tnzr/cardiasense-ai.git
+cd cardiasense-ai
 ./setup.sh          # venv + deps + downloads HLS-CMDS (37.8 MB) from Zenodo if absent
 ```
 
 `setup.sh` creates the venv, installs dependencies, downloads the dataset from
-its Zenodo source if needed, writes `.env` (`FisioSense_DATA_DIR`), and
+its Zenodo source if needed, writes `.env` (`ASCULTO_DATA_DIR`), and
 **verifies the manifests** (`sound=535 heart=195 lung=195`).
 
 ```bash
@@ -187,11 +189,19 @@ cd ml && SMOKE=1 ./scripts/run_sequential.sh
 | `ml/scripts/` | sequential campaign orchestrator + gates (`run_sequential.sh`) |
 | `webapp/` | FastAPI app: inference registry, report engine, game, templates, static |
 | `scripts/` | `make_assets.py`, `screenshot_walkthrough.py` |
+| `deploy/` | container images (`api`, `inference`), worker service + Modal batch worker |
+| `gateway/` | Cloudflare Worker (Hono): auth, quotas, jobs, Stripe webhooks |
+| `frontend/` | static SPA (Vite) for Cloudflare Pages |
+| `desktop/` | Electron + ONNX offline app |
+| `infra/terraform/` | Cloudflare / Neon / Modal / GitHub modules (R2 remote state) |
+| `finance/` | `pricing.yaml` + unit-economics model (emits `docs/Finance.md`) |
+| `billing/` | Stripe product catalogue + setup script |
+| `legal/` | ToS / Privacy / DPA / Cookie templates |
 | `docs/` | strategy, architecture, tech stack, app spec, mobile-compute analysis, walkthrough |
 
 ## Notebooks
 
-End-to-end notebooks (Jupyter, kernel `cardiasense`) covering the entire process:
+End-to-end notebooks (Jupyter, kernel `asculto`) covering the entire process:
 
 | notebook | covers |
 |---|---|
@@ -206,6 +216,11 @@ End-to-end notebooks (Jupyter, kernel `cardiasense`) covering the entire process
 .venv/bin/python -m jupyter notebook notebooks/                   # or: jupyter lab
 ```
 
+The executed notebooks are also exported to a single **solutions document**:
+[`docs/Notebook_Solutions.pdf`](docs/Notebook_Solutions.pdf) (18 pages).
+Regenerate it with `scripts/export_solutions_pdf.sh` (needs `xelatex` +
+`pdfunite`).
+
 ## Documentation
 
 - [`docs/BusinessPlan.md`](docs/BusinessPlan.md) — strategy, markets, revenue
@@ -216,6 +231,9 @@ End-to-end notebooks (Jupyter, kernel `cardiasense`) covering the entire process
 - [`docs/MobileCompute.md`](docs/MobileCompute.md) — measured model profile, phone latency, quantization
 - [`docs/WALKTHROUGH.md`](docs/WALKTHROUGH.md) — instructional usage walkthrough
 - [`docs/RnD_PrototypingPlan.md`](docs/RnD_PrototypingPlan.md) — R&D plan
+- [`docs/DatasetLicenses.md`](docs/DatasetLicenses.md) — dataset license registry + attribution
+- [`docs/Deployment.md`](docs/Deployment.md) — deployment runbook (containers, Terraform, Workers, Pages)
+- [`docs/Finance.md`](docs/Finance.md) — unit economics, break-even, sensitivity, investor metrics
 
 ## Data
 

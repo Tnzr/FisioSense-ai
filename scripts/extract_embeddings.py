@@ -32,7 +32,7 @@ def main(argv=None) -> int:
     args = p.parse_args(argv)
 
     os.makedirs(args.out_dir, exist_ok=True)
-    data = emb.corpus_embeddings(args.data_dir or os.environ.get("CARDIASENSE_DATA_DIR", ""),
+    data = emb.corpus_embeddings(args.data_dir or os.environ.get("ASCULTO_DATA_DIR", ""),
                                  args.mc_out, device=args.device)
     cls = np.stack(data["rows"]["cls"])
     np.savez(os.path.join(args.out_dir, "embeddings_heart_10class.npz"),

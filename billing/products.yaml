@@ -1,0 +1,44 @@
+# Asculto subscription catalogue (source of truth for Stripe + entitlements).
+#
+# `billing/setup_stripe.py` creates/updates these products and prices
+# idempotently. Gateway entitlements (gateway/src/auth.ts) mirror `quota`/`llm`.
+brand: Asculto
+
+tiers:
+  free:
+    name: "Asculto Free"
+    price: 0
+    interval: month
+    quota: 5
+    llm: false
+    batch: false
+    features: ["5 reports/mo", "offline narrative", "desktop app (offline)"]
+  pro:
+    name: "Asculto Pro"
+    price: 9
+    interval: month
+    quota: 25
+    llm: true
+    batch: false
+    features: ["25 reports/mo", "personalized LLM narrative", "multi-scale temporal", "email support"]
+  research:
+    name: "Asculto Research"
+    price: 29
+    interval: month
+    quota: 100
+    llm: true
+    batch: true
+    features: ["100 reports/mo", "batch API", "LLM narrative", "priority queue"]
+  enterprise:
+    name: "Asculto Enterprise / OEM"
+    price: 500
+    interval: month
+    quota: 1000
+    llm: true
+    batch: true
+    features: ["quota/SLA-based", "OEM integration", "DPA + support", "on-prem/offline option"]
+
+# optional annual plans ("2 months free")
+annual:
+  enabled: true
+  months_free: 2

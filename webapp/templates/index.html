@@ -1,11 +1,56 @@
 {% extends "base.html" %}
-{% block title %}CardiaSense — Analyze{% endblock %}
+{% block title %}Asculto — Auscultation training &amp; analysis{% endblock %}
 {% block content %}
 <section class="hero">
-  <h1>Upload a recording, get an explained report</h1>
-  <p>Single file or a whole batch. The service routes the clip (heart / lung / mixed),
-     screens it (normal / abnormal), types it (10 heart / 6 lung classes), and renders
-     figures with plain-language health-awareness guidance.</p>
+  <h1>Learn auscultation with real heart &amp; lung sounds</h1>
+  <p>Asculto is a free educational auscultation training tool. Take the guided
+     course, drill yourself with listening rounds, and analyze recordings with an
+     explained, research-grade AI report. Everything is built on the HLS-CMDS
+     dataset and stays clearly educational — not a medical device, not a diagnosis.</p>
+  <div class="cta-row">
+    <a class="btn primary" href="/course">Start the free course →</a>
+    <a class="btn" href="#analyze">Analyze a recording</a>
+    <a class="btn" href="/game">Play the listening game</a>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Hear the difference</h2>
+  <p class="hint">Real dataset recordings, ready to play in your browser.</p>
+  {% for ex in examples %}
+    {% set f, a = knowledge(ex.label) %}
+    <div class="example">
+      <div class="example-row">
+        <span class="example-label">{{ ex.label }}</span>
+        <audio controls preload="none"
+               src="{{ audio_url(ex.sample_id, ex.task, ex.scheme) }}"></audio>
+      </div>
+      {% if f %}<p class="muted">{{ f }}</p>{% endif %}
+    </div>
+  {% endfor %}
+</section>
+
+<section class="card">
+  <div class="grid">
+    <div>
+      <h2>Guided training course</h2>
+      <p>Six modules: heart &amp; lung sound basics, source identification, screening,
+         heart typing, lung typing, and a final assessment. Lessons include curated
+         examples; practice rounds are graded against dataset ground truth.</p>
+      <p><a class="btn primary" href="/course">Start the course</a></p>
+    </div>
+    <div>
+      <h2>Listening game</h2>
+      <p>Random listening rounds across five domains with instant explanations.
+         A quick way to keep your ear in shape after the course.</p>
+      <p><a class="btn" href="/game">Play the game</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="card" id="analyze">
+  <h2>Analyze a recording</h2>
+  <p class="hint">Upload one file for a full explained report, or several for a batch table.</p>
 </section>
 
 <form class="card" action="/analyze" method="post" enctype="multipart/form-data">
@@ -78,8 +123,5 @@
 </div>
 {% endif %}
 
-<div class="card">
-  <h2>Learn by listening</h2>
-  <p>Play the <a href="/game">educational game</a> — identify real heart and lung sounds against dataset ground truth.</p>
-</div>
+<div class="card warn"><strong>Disclaimer.</strong> {{ disclaimer }}</div>
 {% endblock %}

@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Automated walkthrough screenshots of the CardiaSense web app.
+"""Automated walkthrough screenshots of the Asculto web app.
 
 Starts the FastAPI server if it is not already reachable, then uses Playwright
 (system Chromium) to capture the key surfaces into docs/walkthrough/.
 
 Usage:
   python scripts/screenshot_walkthrough.py
-  CARDIASENSE_URL=http://localhost:8010 python scripts/screenshot_walkthrough.py
+  ASCULTO_URL=http://localhost:8010 python scripts/screenshot_walkthrough.py
 """
 from __future__ import annotations
 
@@ -18,7 +18,7 @@ import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "docs", "walkthrough")
-BASE = os.environ.get("CARDIASENSE_URL", "http://localhost:8010")
+BASE = os.environ.get("ASCULTO_URL", "http://localhost:8010")
 CHROME = os.environ.get("CHROME_PATH", "/usr/bin/chromium-browser")
 
 
@@ -44,7 +44,7 @@ def main() -> int:
     proc = None
     if not _reachable(BASE):
         print(f"[shots] starting server on {BASE}")
-        env = dict(os.environ, CARDIASENSE_DEVICE=os.environ.get("CARDIASENSE_DEVICE", "cpu"))
+        env = dict(os.environ, ASCULTO_DEVICE=os.environ.get("ASCULTO_DEVICE", "cpu"))
         proc = subprocess.Popen(
             [sys.executable, "-m", "uvicorn", "webapp.app.main:app", "--host", "0.0.0.0", "--port", "8010"],
             cwd=ROOT, env=env, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,

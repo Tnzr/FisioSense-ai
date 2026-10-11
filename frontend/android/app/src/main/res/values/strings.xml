@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Asculto</string>
+    <string name="title_activity_main">Asculto</string>
+    <string name="package_name">ai.asculto.app</string>
+    <string name="custom_url_scheme">ai.asculto.app</string>
+</resources>

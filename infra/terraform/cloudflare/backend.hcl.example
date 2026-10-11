@@ -1,0 +1,9 @@
+bucket                      = "asculto-tfstate"
+key                         = "cloudflare/terraform.tfstate"
+region                      = "auto"
+endpoints                   = { s3 = "https://REPLACE_ACCOUNT_ID.r2.cloudflarestorage.com" }
+access_key                  = "REPLACE"
+secret_key                  = "REPLACE"
+skip_credentials_validation = true
+skip_region_validation      = true
+skip_requesting_account_id  = true

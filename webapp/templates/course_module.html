@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block title %}{{ module.title }}{% endblock %}
+{% block content %}
+<nav class="crumbs">
+  <a href="/course">Course</a> › <span>{{ module.title }}</span>
+</nav>
+
+<section class="hero">
+  <h1>{{ module.title }}</h1>
+  <p>{{ module.summary }}</p>
+</section>
+
+{% for lesson in module.lessons %}
+<section class="card lesson" id="{{ lesson.id }}">
+  <h2>{{ lesson.title }}</h2>
+  {% for p in lesson.paragraphs %}<p>{{ p }}</p>{% endfor %}
+  {% if lesson.examples %}
+    <h3>Listening examples</h3>
+    {% for ex in lesson.examples %}
+      <div class="example" data-label="{{ ex.label }}">
+        {% set f, a = knowledge(ex.label) %}
+        <div class="example-row">
+          <span class="example-label">{{ ex.label }}</span>
+          <audio controls preload="none"
+                 src="{{ audio_url(ex.sample_id, ex.task, ex.scheme) }}"></audio>
+        </div>
+        {% if f %}<p class="muted">{{ f }}</p>{% endif %}
+        {% if a %}<p class="muted small">{{ a }}</p>{% endif %}
+      </div>
+    {% endfor %}
+  {% endif %}
+</section>
+{% endfor %}
+
+{% if practice_domain %}
+<section class="card" id="practice">
+  <h2>Practice round — {{ practice_domain.label }}</h2>
+  <p>{{ practice_domain.question }}</p>
+  <div class="practice">
+    <button class="primary" id="practice-start">New round</button>
+    <p id="practice-score" class="hint">This session: <strong>0</strong> / <span>0</span> correct</p>
+    <p id="practice-question" class="question muted">Start a round to hear a clip.</p>
+    <audio id="practice-player" controls style="display:none"></audio>
+    <div id="practice-options" class="options"></div>
+    <div id="practice-feedback" class="feedback"></div>
+  </div>
+</section>
+{% endif %}
+
+<section class="card" id="checkpoint">
+  <h2>Checkpoint quiz</h2>
+  <p class="hint">Answer every question, then submit. Pass with at least
+     {{ module.pass_score }} / {{ module.quiz|length }} correct to complete this module.</p>
+  <form id="quiz-form">
+    {% for q in module.quiz %}
+      <div class="quiz-item" data-question="{{ loop.index0 }}">
+        <p class="question">{{ loop.index }}. {{ q.prompt }}</p>
+        {% if q.sample_id %}
+          <audio controls preload="none"
+                 src="{{ audio_url(q.sample_id, q.task, q.scheme) }}"></audio>
+        {% endif %}
+        {% for opt in q.options %}
+          <label class="quiz-option">
+            <input type="radio" name="q{{ loop.index0 }}" value="{{ loop.index0 }}">
+            {{ opt }}
+          </label>
+        {% endfor %}
+      </div>
+    {% endfor %}
+    <button type="submit" class="primary">Submit checkpoint</button>
+    <p id="quiz-status" class="hint"></p>
+  </form>
+  <div id="quiz-results"></div>
+  <div id="next-module" class="next-module" hidden></div>
+</section>
+
+<section class="card cert" id="certificate" hidden>
+  <h2>Certificate of completion</h2>
+  <p>You passed every module. Enter your name to generate a printable certificate.</p>
+  <div class="row">
+    <input type="text" id="cert-name" placeholder="Your name">
+    <button class="primary" id="cert-go">Generate</button>
+    <button class="primary" id="cert-print" hidden>Print / save PDF</button>
+  </div>
+  <div id="cert-panel" class="cert-panel" hidden></div>
+</section>
+
+<div class="card warn"><strong>Disclaimer.</strong> {{ disclaimer }}</div>
+
+<script id="course-state" type="application/json">
+{
+  "module_id": {{ module.id | tojson }},
+  "module_index": {{ module_index | default(0) | tojson }},
+  "total_modules": {{ modules | length | tojson }},
+  "module_ids": {{ modules | map(attribute="id") | list | tojson }},
+  "practice_domain": {{ practice_domain.get("key", "") | tojson }},
+  "pass_score": {{ module.pass_score | tojson }},
+  "quiz_total": {{ module.quiz | length | tojson }}
+}
+</script>
+{% endblock %}
+{% block scripts %}<script src="/static/course.js"></script>{% endblock %}

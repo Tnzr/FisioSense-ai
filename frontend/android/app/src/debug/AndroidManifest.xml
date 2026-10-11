@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Debug-only overlay: allows cleartext HTTP so the app can reach a local
+     development API (10.0.2.2 / adb reverse) from the emulator. Release
+     builds do NOT include this, so production stays HTTPS-only. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools">
+    <application android:usesCleartextTraffic="true"
+                 tools:targetApi="28" />
+</manifest>

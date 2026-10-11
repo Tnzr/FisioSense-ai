@@ -1,6 +1,6 @@
 # Instructional Usage Walkthrough
 
-A step-by-step tour of the CardiaSense web app — **Inference-as-a-Service** and
+A step-by-step tour of the Asculto web app — **Inference-as-a-Service** and
 the **educational game**. Screenshots are generated automatically by
 `scripts/screenshot_walkthrough.py` (see the bottom of this page).
 

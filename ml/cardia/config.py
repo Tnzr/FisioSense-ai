@@ -15,7 +15,7 @@ except Exception:  # pragma: no cover - dotenv is optional
     pass
 
 DEFAULT_DATA_DIR = os.environ.get(
-    "CARDIASENSE_DATA_DIR",
+    "ASCULTO_DATA_DIR",
     "/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset "
     "Recorded from a Clinical Manikin using Digital Stethoscope",
 )

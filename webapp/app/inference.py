@@ -199,7 +199,13 @@ REGISTRY: Optional[Registry] = None
 def get_registry() -> Registry:
     global REGISTRY
     if REGISTRY is None:
-        REGISTRY = Registry()
+        backend = os.environ.get("ASCULTO_BACKEND", "torch").lower()
+        if backend == "onnx":
+            from .onnx_inference import OnnxRegistry
+
+            REGISTRY = OnnxRegistry()
+        else:
+            REGISTRY = Registry()
         REGISTRY.load()
     return REGISTRY
 

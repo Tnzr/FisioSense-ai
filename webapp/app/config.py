@@ -16,14 +16,14 @@ except Exception:  # pragma: no cover - dotenv is optional
     pass
 
 DATA_DIR = os.environ.get(
-    "CARDIASENSE_DATA_DIR",
+    "ASCULTO_DATA_DIR",
     "/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset "
     "Recorded from a Clinical Manikin using Digital Stethoscope",
 )
-BINARY_OUT = os.environ.get("CARDIASENSE_BINARY_OUT", os.path.join(ML, "runs"))
-MC_OUT = os.environ.get("CARDIASENSE_MC_OUT", "/media/tnzr/AuxVolume/cardiasense-runs/mc")
-DEVICE = os.environ.get("CARDIASENSE_DEVICE", "cpu")  # PoC default CPU; set "cuda" for GPU
-SEED = int(os.environ.get("CARDIASENSE_SEED", "0"))
+BINARY_OUT = os.environ.get("ASCULTO_BINARY_OUT", os.path.join(ML, "runs"))
+MC_OUT = os.environ.get("ASCULTO_MC_OUT", "/media/tnzr/AuxVolume/cardiasense-runs/mc")
+DEVICE = os.environ.get("ASCULTO_DEVICE", "cpu")  # PoC default CPU; set "cuda" for GPU
+SEED = int(os.environ.get("ASCULTO_SEED", "0"))
 
 
 @dataclass
@@ -170,4 +170,11 @@ KNOWLEDGE = {
 DISCLAIMER = (
     "This is an educational / research prototype trained on a manikin dataset. It is NOT a medical device "
     "and does NOT provide a diagnosis. Always consult a qualified healthcare professional about any concern."
+)
+
+# Dataset attribution (required by the training data's CC BY 4.0 license).
+DATASET_CREDIT = (
+    "Models trained on HLS-CMDS — Torabi, Y., Shirani, S., & Reilly, J. P. (2025), "
+    "IEEE Data Descriptions, DOI 10.1109/IEEEDATA.2025.3566012 (Zenodo 15376628). "
+    "Dataset licensed CC BY 4.0. See docs/DatasetLicenses.md."
 )

@@ -3,7 +3,7 @@
 Two modes:
 
 * ``LLMClient`` — OpenAI-compatible chat-completions via HTTP, configured with
-  environment variables (`CARDIASENSE_LLM_*`). Produces a personalized,
+  environment variables (`ASCULTO_LLM_*`). Produces a personalized,
   structured report grounded in the head probabilities and patient context.
 * ``LLMSynthesizer`` — deterministic offline fallback that returns the same
   structured shape (summary, findings, recommendations for medicine / diet /
@@ -101,7 +101,7 @@ def build_prompt(findings: List[dict], patient_context: str = "", history: Optio
     if history:
         conv = "\nConversation so far:\n" + "\n".join(
             f"- {m.get('role')}: {m.get('content')}" for m in history[-8:])
-    return f"""You are CardiaSense, an educational health-awareness assistant for
+    return f"""You are Asculto, an educational health-awareness assistant for
 heart/lung sound analysis. You write brief, plain-language reports.
 
 Auscultation model findings (ensemble of neural heads):
@@ -132,10 +132,10 @@ def parse_llm_json(text: str) -> Optional[dict]:
 
 class LLMClient:
     def __init__(self) -> None:
-        self.base_url = os.environ.get("CARDIASENSE_LLM_BASE_URL", "https://api.openai.com/v1").rstrip("/")
-        self.model = os.environ.get("CARDIASENSE_LLM_MODEL", "gpt-4o-mini")
-        self.api_key = os.environ.get("CARDIASENSE_LLM_API_KEY", "")
-        self.timeout = float(os.environ.get("CARDIASENSE_LLM_TIMEOUT", "30"))
+        self.base_url = os.environ.get("ASCULTO_LLM_BASE_URL", "https://api.openai.com/v1").rstrip("/")
+        self.model = os.environ.get("ASCULTO_LLM_MODEL", "gpt-4o-mini")
+        self.api_key = os.environ.get("ASCULTO_LLM_API_KEY", "")
+        self.timeout = float(os.environ.get("ASCULTO_LLM_TIMEOUT", "30"))
 
     @property
     def enabled(self) -> bool:

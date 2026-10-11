@@ -1,0 +1,42 @@
+name: deploy-infra
+
+on:
+  workflow_dispatch:
+    inputs:
+      module:
+        description: Terraform module to apply
+        required: true
+        type: choice
+        options: [cloudflare, neon, modal, github]
+      action:
+        description: Terraform action
+        required: true
+        type: choice
+        default: plan
+        options: [plan, apply]
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: infra/terraform/${{ inputs.module }}
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      TF_VAR_cloudflare_api_token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      TF_VAR_account_id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      TF_VAR_neon_api_key: ${{ secrets.NEON_API_KEY }}
+      TF_VAR_github_token: ${{ secrets.GH_TF_TOKEN }}
+      TF_VAR_modal_token_id: ${{ secrets.MODAL_TOKEN_ID }}
+      TF_VAR_modal_token_secret: ${{ secrets.MODAL_TOKEN_SECRET }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+      - name: Init (R2 backend)
+        run: terraform init -backend-config=backend.hcl
+      - name: Plan
+        run: terraform plan -var-file=../envs/prod.tfvars -out=tfplan
+      - name: Apply
+        if: ${{ inputs.action == 'apply' }}
+        run: terraform apply -auto-approve tfplan

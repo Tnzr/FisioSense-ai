@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0f1720" />
+  <meta name="description" content="Free educational auscultation training with real heart and lung sounds, plus AI-assisted analysis. Not a medical device." />
+  <title>Asculto — Analyze</title>
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/icons/icon-192.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+  <script type="module" crossorigin src="/assets/index-CyOckImW.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BsBLyW5h.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">🩺 Asculto <span class="tag">Inference as a Service</span></div>
+    <nav><a href="/game.html">Learn (game)</a></nav>
+  </header>
+
+  <div class="disclaimer-banner">
+    ⚠️ Educational/research prototype trained on a manikin dataset. Not a medical
+    device and not a diagnosis.
+  </div>
+
+  <main>
+    <section class="hero">
+      <h1>Upload a recording, get an explained report</h1>
+      <p>Routes the clip (heart / lung / mixed), screens it, types it, and renders
+         figures with plain-language health-awareness guidance.</p>
+    </section>
+
+    <form id="analyze-form" class="card">
+      <label class="lbl">Audio file (.wav)</label>
+      <input id="file" type="file" accept=".wav,audio/*" required />
+
+      <label class="lbl">Explanation depth</label>
+      <select id="explanation">
+        <option value="brief">Brief</option>
+        <option value="standard" selected>Standard</option>
+        <option value="detailed">Detailed</option>
+      </select>
+
+      <label class="chk"><input id="temporal" type="checkbox" checked />
+        Temporal multi-scale view</label>
+
+      <label class="lbl">Patient context (optional, avoid PHI)</label>
+      <input id="patient_context" type="text" style="width:100%" />
+
+      <button class="primary" type="submit">Analyze</button>
+      <p id="status" class="muted"></p>
+    </form>
+
+    <section id="results"></section>
+
+    <footer>
+      Asculto AI · HLS-CMDS benchmark PoC · educational/research prototype — not a medical device.
+      <p class="credits">Data: HLS-CMDS (Torabi, Shirani &amp; Reilly, 2025; DOI 10.1109/IEEEDATA.2025.3566012) — CC BY 4.0.</p>
+    </footer>
+  </main>
+
+</body>
+</html>

@@ -78,6 +78,7 @@ def analyze_waveform(wav: torch.Tensor, sr: int, filename: str, options: ReportO
         "figures": {},
         "narrative": [],
         "disclaimer": config.DISCLAIMER,
+        "credits": config.DATASET_CREDIT,
         "requested_heads": options.heads,
         "explanation": options.explanation,
         "figures_level": options.figures,

@@ -1,0 +1,196 @@
+sample_id,file_path,group,source,lung_type,gender,location,target,task_label
+M_N_RUA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/M_N_RUA.wav,M_N_RUA,LS,Normal,M,RUA,0,normal
+F_N_LUA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/F_N_LUA.wav,F_N_LUA,LS,Normal,F,LUA,0,normal
+F_N_RMA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/F_N_RMA.wav,F_N_RMA,LS,Normal,F,RMA,0,normal
+F_N_LMA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/F_N_LMA.wav,F_N_LMA,LS,Normal,F,LMA,0,normal
+M_N_RLA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/M_N_RLA.wav,M_N_RLA,LS,Normal,M,RLA,0,normal
+M_N_LLA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/M_N_LLA.wav,M_N_LLA,LS,Normal,M,LLA,0,normal
+M_PR_RMA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/M_PR_RMA.wav,M_PR_RMA,LS,Pleural Rub,M,RMA,1,abnormal
+M_PR_LUA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/M_PR_LUA.wav,M_PR_LUA,LS,Pleural Rub,M,LUA,1,abnormal
+F_R_LUA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/F_R_LUA.wav,F_R_LUA,LS,Rhonchi,F,LUA,1,abnormal
+M_W_LUA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/M_W_LUA.wav,M_W_LUA,LS,Wheezing,M,LUA,1,abnormal
+M_FC_LUA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/M_FC_LUA.wav,M_FC_LUA,LS,Fine Crackles,M,LUA,1,abnormal
+M_N_LUA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/M_N_LUA.wav,M_N_LUA,LS,Normal,M,LUA,0,normal
+M_CC_LLA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/M_CC_LLA.wav,M_CC_LLA,LS,Coarse Crackles,M,LLA,1,abnormal
+M_CC_LUA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/M_CC_LUA.wav,M_CC_LUA,LS,Coarse Crackles,M,LUA,1,abnormal
+F_FC_LUA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/F_FC_LUA.wav,F_FC_LUA,LS,Fine Crackles,F,LUA,1,abnormal
+M_CC_RLA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/M_CC_RLA.wav,M_CC_RLA,LS,Coarse Crackles,M,RLA,1,abnormal
+F_R_RLA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/F_R_RLA.wav,F_R_RLA,LS,Rhonchi,F,RLA,1,abnormal
+F_W_RUA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/F_W_RUA.wav,F_W_RUA,LS,Wheezing,F,RUA,1,abnormal
+M_PR_LLA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/M_PR_LLA.wav,M_PR_LLA,LS,Pleural Rub,M,LLA,1,abnormal
+M_PR_LMA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/M_PR_LMA.wav,M_PR_LMA,LS,Pleural Rub,M,LMA,1,abnormal
+M_R_RUA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/M_R_RUA.wav,M_R_RUA,LS,Rhonchi,M,RUA,1,abnormal
+M_FC_RUA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/M_FC_RUA.wav,M_FC_RUA,LS,Fine Crackles,M,RUA,1,abnormal
+M_R_LUA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/M_R_LUA.wav,M_R_LUA,LS,Rhonchi,M,LUA,1,abnormal
+F_PR_LMA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/F_PR_LMA.wav,F_PR_LMA,LS,Pleural Rub,F,LMA,1,abnormal
+F_CC_LMA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/F_CC_LMA.wav,F_CC_LMA,LS,Coarse Crackles,F,LMA,1,abnormal
+F_CC_RLA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/F_CC_RLA.wav,F_CC_RLA,LS,Coarse Crackles,F,RLA,1,abnormal
+M_FC_RLA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/M_FC_RLA.wav,M_FC_RLA,LS,Fine Crackles,M,RLA,1,abnormal
+F_CC_RMA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/F_CC_RMA.wav,F_CC_RMA,LS,Coarse Crackles,F,RMA,1,abnormal
+M_W_RLA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/M_W_RLA.wav,M_W_RLA,LS,Wheezing,M,RLA,1,abnormal
+M_R_RLA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/M_R_RLA.wav,M_R_RLA,LS,Rhonchi,M,RLA,1,abnormal
+F_FC_RLA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/F_FC_RLA.wav,F_FC_RLA,LS,Fine Crackles,F,RLA,1,abnormal
+M_N_RMA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/M_N_RMA.wav,M_N_RMA,LS,Normal,M,RMA,0,normal
+M_R_LMA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/M_R_LMA.wav,M_R_LMA,LS,Rhonchi,M,LMA,1,abnormal
+F_CC_LLA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/F_CC_LLA.wav,F_CC_LLA,LS,Coarse Crackles,F,LLA,1,abnormal
+F_R_LMA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/F_R_LMA.wav,F_R_LMA,LS,Rhonchi,F,LMA,1,abnormal
+F_N_LLA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/F_N_LLA.wav,F_N_LLA,LS,Normal,F,LLA,0,normal
+M_W_RUA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/M_W_RUA.wav,M_W_RUA,LS,Wheezing,M,RUA,1,abnormal
+M_N_LMA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/M_N_LMA.wav,M_N_LMA,LS,Normal,M,LMA,0,normal
+F_PR_LLA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/F_PR_LLA.wav,F_PR_LLA,LS,Pleural Rub,F,LLA,1,abnormal
+M_W_RMA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/M_W_RMA.wav,M_W_RMA,LS,Wheezing,M,RMA,1,abnormal
+M_PR_RUA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/M_PR_RUA.wav,M_PR_RUA,LS,Pleural Rub,M,RUA,1,abnormal
+M_W_LLA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/M_W_LLA.wav,M_W_LLA,LS,Wheezing,M,LLA,1,abnormal
+M_R_LLA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/M_R_LLA.wav,M_R_LLA,LS,Rhonchi,M,LLA,1,abnormal
+F_N_RLA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/F_N_RLA.wav,F_N_RLA,LS,Normal,F,RLA,0,normal
+M_CC_LMA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/M_CC_LMA.wav,M_CC_LMA,LS,Coarse Crackles,M,LMA,1,abnormal
+M_W_LMA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/M_W_LMA.wav,M_W_LMA,LS,Wheezing,M,LMA,1,abnormal
+F_N_RUA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/F_N_RUA.wav,F_N_RUA,LS,Normal,F,RUA,0,normal
+M_PR_RLA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/M_PR_RLA.wav,M_PR_RLA,LS,Pleural Rub,M,RLA,1,abnormal
+F_CC_LUA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/F_CC_LUA.wav,F_CC_LUA,LS,Coarse Crackles,F,LUA,1,abnormal
+F_PR_LUA,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/LS/LS/F_PR_LUA.wav,F_PR_LUA,LS,Pleural Rub,F,LUA,1,abnormal
+L0001,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0001.wav,1,MixL,Rhonchi,F,LUSB,1,abnormal
+L0002,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0002.wav,2,MixL,Normal,F,RLA,0,normal
+L0003,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0003.wav,3,MixL,Normal,M,LMA,0,normal
+L0004,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0004.wav,4,MixL,Coarse Crackles,F,Apex,1,abnormal
+L0005,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0005.wav,5,MixL,Fine Crackles,M,RUSB,1,abnormal
+L0006,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0006.wav,6,MixL,Pleural Rub,F,RC,1,abnormal
+L0007,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0007.wav,7,MixL,Pleural Rub,M,Apex,1,abnormal
+L0008,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0008.wav,8,MixL,Pleural Rub,F,LMA,1,abnormal
+L0009,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0009.wav,9,MixL,Wheezing,M,LUA,1,abnormal
+L0010,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0010.wav,10,MixL,Coarse Crackles,F,LUA,1,abnormal
+L0011,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0011.wav,11,MixL,Normal,M,Apex,0,normal
+L0012,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0012.wav,12,MixL,Rhonchi,F,RMA,1,abnormal
+L0013,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0013.wav,13,MixL,Pleural Rub,F,RC,1,abnormal
+L0014,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0014.wav,14,MixL,Rhonchi,F,LUA,1,abnormal
+L0015,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0015.wav,15,MixL,Coarse Crackles,F,LUA,1,abnormal
+L0016,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0016.wav,16,MixL,Rhonchi,F,RLA,1,abnormal
+L0017,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0017.wav,17,MixL,Coarse Crackles,F,RC,1,abnormal
+L0018,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0018.wav,18,MixL,Wheezing,F,RMA,1,abnormal
+L0019,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0019.wav,19,MixL,Pleural Rub,M,RUA,1,abnormal
+L0020,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0020.wav,20,MixL,Normal,F,RLA,0,normal
+L0021,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0021.wav,21,MixL,Coarse Crackles,M,LUSB,1,abnormal
+L0022,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0022.wav,22,MixL,Fine Crackles,M,LMA,1,abnormal
+L0023,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0023.wav,23,MixL,Normal,M,LC,0,normal
+L0024,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0024.wav,24,MixL,Wheezing,M,LUSB,1,abnormal
+L0025,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0025.wav,25,MixL,Pleural Rub,M,RC,1,abnormal
+L0026,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0026.wav,26,MixL,Pleural Rub,F,LUSB,1,abnormal
+L0027,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0027.wav,27,MixL,Coarse Crackles,M,RMA,1,abnormal
+L0028,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0028.wav,28,MixL,Coarse Crackles,F,RC,1,abnormal
+L0029,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0029.wav,29,MixL,Pleural Rub,M,LC,1,abnormal
+L0030,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0030.wav,30,MixL,Pleural Rub,F,RC,1,abnormal
+L0031,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0031.wav,31,MixL,Fine Crackles,F,RC,1,abnormal
+L0032,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0032.wav,32,MixL,Pleural Rub,F,LUA,1,abnormal
+L0033,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0033.wav,33,MixL,Fine Crackles,F,LUSB,1,abnormal
+L0034,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0034.wav,34,MixL,Coarse Crackles,M,RC,1,abnormal
+L0035,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0035.wav,35,MixL,Fine Crackles,M,RLA,1,abnormal
+L0036,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0036.wav,36,MixL,Normal,M,LUA,0,normal
+L0037,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0037.wav,37,MixL,Normal,M,LLSB,0,normal
+L0038,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0038.wav,38,MixL,Normal,F,LLSB,0,normal
+L0039,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0039.wav,39,MixL,Wheezing,M,LC,1,abnormal
+L0040,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0040.wav,40,MixL,Rhonchi,M,LC,1,abnormal
+L0041,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0041.wav,41,MixL,Normal,F,LLA,0,normal
+L0042,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0042.wav,42,MixL,Coarse Crackles,F,RUA,1,abnormal
+L0043,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0043.wav,43,MixL,Pleural Rub,M,LLSB,1,abnormal
+L0044,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0044.wav,44,MixL,Coarse Crackles,M,RC,1,abnormal
+L0045,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0045.wav,45,MixL,Fine Crackles,M,LLSB,1,abnormal
+L0046,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0046.wav,46,MixL,Normal,F,LMA,0,normal
+L0047,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0047.wav,47,MixL,Rhonchi,M,RMA,1,abnormal
+L0048,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0048.wav,48,MixL,Wheezing,F,RLA,1,abnormal
+L0049,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0049.wav,49,MixL,Rhonchi,M,RUA,1,abnormal
+L0050,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0050.wav,50,MixL,Wheezing,F,LUSB,1,abnormal
+L0051,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0051.wav,51,MixL,Normal,F,RC,0,normal
+L0052,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0052.wav,52,MixL,Pleural Rub,F,LC,1,abnormal
+L0053,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0053.wav,53,MixL,Coarse Crackles,F,LLSB,1,abnormal
+L0054,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0054.wav,54,MixL,Wheezing,F,RUSB,1,abnormal
+L0055,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0055.wav,55,MixL,Fine Crackles,M,RC,1,abnormal
+L0056,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0056.wav,56,MixL,Rhonchi,F,LUSB,1,abnormal
+L0057,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0057.wav,57,MixL,Coarse Crackles,F,RLA,1,abnormal
+L0058,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0058.wav,58,MixL,Rhonchi,M,RUSB,1,abnormal
+L0059,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0059.wav,59,MixL,Pleural Rub,F,RLA,1,abnormal
+L0060,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0060.wav,60,MixL,Wheezing,M,LMA,1,abnormal
+L0061,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0061.wav,61,MixL,Rhonchi,F,LLSB,1,abnormal
+L0062,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0062.wav,62,MixL,Coarse Crackles,F,RMA,1,abnormal
+L0063,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0063.wav,63,MixL,Pleural Rub,F,RUA,1,abnormal
+L0064,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0064.wav,64,MixL,Pleural Rub,M,Apex,1,abnormal
+L0065,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0065.wav,65,MixL,Pleural Rub,F,Apex,1,abnormal
+L0066,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0066.wav,66,MixL,Normal,M,LLSB,0,normal
+L0067,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0067.wav,67,MixL,Rhonchi,F,RUA,1,abnormal
+L0068,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0068.wav,68,MixL,Fine Crackles,M,RUSB,1,abnormal
+L0069,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0069.wav,69,MixL,Coarse Crackles,M,RLA,1,abnormal
+L0070,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0070.wav,70,MixL,Normal,F,LUA,0,normal
+L0071,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0071.wav,71,MixL,Rhonchi,M,RUSB,1,abnormal
+L0072,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0072.wav,72,MixL,Pleural Rub,M,Apex,1,abnormal
+L0073,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0073.wav,73,MixL,Pleural Rub,M,LMA,1,abnormal
+L0074,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0074.wav,74,MixL,Normal,F,RUA,0,normal
+L0075,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0075.wav,75,MixL,Pleural Rub,F,LUSB,1,abnormal
+L0076,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0076.wav,76,MixL,Fine Crackles,F,LMA,1,abnormal
+L0077,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0077.wav,77,MixL,Rhonchi,F,RUA,1,abnormal
+L0078,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0078.wav,78,MixL,Normal,M,RMA,0,normal
+L0079,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0079.wav,79,MixL,Coarse Crackles,F,LC,1,abnormal
+L0080,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0080.wav,80,MixL,Pleural Rub,M,LUSB,1,abnormal
+L0081,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0081.wav,81,MixL,Wheezing,F,LLSB,1,abnormal
+L0082,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0082.wav,82,MixL,Fine Crackles,F,LUA,1,abnormal
+L0083,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0083.wav,83,MixL,Pleural Rub,M,LLSB,1,abnormal
+L0084,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0084.wav,84,MixL,Normal,M,LMA,0,normal
+L0085,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0085.wav,85,MixL,Rhonchi,F,LC,1,abnormal
+L0086,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0086.wav,86,MixL,Wheezing,M,LMA,1,abnormal
+L0087,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0087.wav,87,MixL,Coarse Crackles,M,LMA,1,abnormal
+L0088,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0088.wav,88,MixL,Rhonchi,M,LC,1,abnormal
+L0089,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0089.wav,89,MixL,Wheezing,M,LC,1,abnormal
+L0090,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0090.wav,90,MixL,Rhonchi,M,RUA,1,abnormal
+L0091,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0091.wav,91,MixL,Rhonchi,M,RUSB,1,abnormal
+L0092,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0092.wav,92,MixL,Wheezing,M,RC,1,abnormal
+L0093,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0093.wav,93,MixL,Coarse Crackles,M,LMA,1,abnormal
+L0094,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0094.wav,94,MixL,Rhonchi,M,LC,1,abnormal
+L0095,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0095.wav,95,MixL,Normal,F,Apex,0,normal
+L0096,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0096.wav,96,MixL,Rhonchi,M,LUA,1,abnormal
+L0097,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0097.wav,97,MixL,Pleural Rub,F,RUSB,1,abnormal
+L0098,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0098.wav,98,MixL,Wheezing,M,LUSB,1,abnormal
+L0099,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0099.wav,99,MixL,Fine Crackles,F,RUSB,1,abnormal
+L0100,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0100.wav,100,MixL,Coarse Crackles,F,LLSB,1,abnormal
+L0101,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0101.wav,101,MixL,Wheezing,M,RMA,1,abnormal
+L0102,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0102.wav,102,MixL,Pleural Rub,M,RLA,1,abnormal
+L0103,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0103.wav,103,MixL,Wheezing,F,LLA,1,abnormal
+L0104,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0104.wav,104,MixL,Fine Crackles,M,LUSB,1,abnormal
+L0105,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0105.wav,105,MixL,Wheezing,F,RUSB,1,abnormal
+L0106,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0106.wav,106,MixL,Rhonchi,M,RC,1,abnormal
+L0107,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0107.wav,107,MixL,Pleural Rub,M,LLSB,1,abnormal
+L0108,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0108.wav,108,MixL,Rhonchi,F,LUA,1,abnormal
+L0109,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0109.wav,109,MixL,Fine Crackles,F,LLA,1,abnormal
+L0110,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0110.wav,110,MixL,Normal,F,RLA,0,normal
+L0111,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0111.wav,111,MixL,Fine Crackles,F,LLA,1,abnormal
+L0112,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0112.wav,112,MixL,Pleural Rub,F,LLA,1,abnormal
+L0113,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0113.wav,113,MixL,Rhonchi,F,RUSB,1,abnormal
+L0114,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0114.wav,114,MixL,Wheezing,M,Apex,1,abnormal
+L0115,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0115.wav,115,MixL,Fine Crackles,F,LLA,1,abnormal
+L0116,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0116.wav,116,MixL,Coarse Crackles,M,RUA,1,abnormal
+L0117,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0117.wav,117,MixL,Rhonchi,M,RMA,1,abnormal
+L0118,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0118.wav,118,MixL,Fine Crackles,M,RMA,1,abnormal
+L0119,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0119.wav,119,MixL,Wheezing,F,LLA,1,abnormal
+L0120,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0120.wav,120,MixL,Fine Crackles,F,LLA,1,abnormal
+L0121,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0121.wav,121,MixL,Wheezing,F,LLA,1,abnormal
+L0122,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0122.wav,122,MixL,Normal,M,RC,0,normal
+L0123,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0123.wav,123,MixL,Wheezing,M,LMA,1,abnormal
+L0124,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0124.wav,124,MixL,Wheezing,M,RMA,1,abnormal
+L0125,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0125.wav,125,MixL,Normal,F,LUSB,0,normal
+L0126,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0126.wav,126,MixL,Fine Crackles,F,LLA,1,abnormal
+L0127,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0127.wav,127,MixL,Wheezing,M,LLA,1,abnormal
+L0128,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0128.wav,128,MixL,Fine Crackles,F,RUSB,1,abnormal
+L0129,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0129.wav,129,MixL,Wheezing,F,Apex,1,abnormal
+L0130,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0130.wav,130,MixL,Normal,F,LLSB,0,normal
+L0131,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0131.wav,131,MixL,Fine Crackles,M,LC,1,abnormal
+L0132,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0132.wav,132,MixL,Wheezing,M,LUA,1,abnormal
+L0133,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0133.wav,133,MixL,Fine Crackles,F,Apex,1,abnormal
+L0134,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0134.wav,134,MixL,Normal,M,LMA,0,normal
+L0135,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0135.wav,135,MixL,Normal,M,LC,0,normal
+L0136,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0136.wav,136,MixL,Wheezing,M,RUSB,1,abnormal
+L0137,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0137.wav,137,MixL,Fine Crackles,M,Apex,1,abnormal
+L0138,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0138.wav,138,MixL,Normal,M,LLA,0,normal
+L0139,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0139.wav,139,MixL,Wheezing,M,LC,1,abnormal
+L0140,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0140.wav,140,MixL,Normal,F,RLA,0,normal
+L0141,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0141.wav,141,MixL,Wheezing,M,Apex,1,abnormal
+L0142,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0142.wav,142,MixL,Normal,F,RMA,0,normal
+L0143,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0143.wav,143,MixL,Wheezing,F,RLA,1,abnormal
+L0144,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0144.wav,144,MixL,Normal,F,LUA,0,normal
+L0145,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/L0145.wav,145,MixL,Normal,M,RUSB,0,normal

@@ -1,0 +1,196 @@
+sample_id,file_path,group,source,heart_type,gender,location,is_clean,target,task_label
+F_N_RC,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/F_N_RC.wav,F_N_RC,HS,Normal,F,RC,True,0,normal
+F_N_LC,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/F_N_LC.wav,F_N_LC,HS,Normal,F,LC,True,0,normal
+M_N_RUSB,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/M_N_RUSB.wav,M_N_RUSB,HS,Normal,M,RUSB,True,0,normal
+F_N_LUSB,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/F_N_LUSB.wav,F_N_LUSB,HS,Normal,F,LUSB,True,0,normal
+F_N_LLSB,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/F_N_LLSB.wav,F_N_LLSB,HS,Normal,F,LLSB,True,0,normal
+F_N_A,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/F_N_A.wav,F_N_A,HS,Normal,F,Apex,True,0,normal
+M_LDM_LC,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/M_LDM_LC.wav,M_LDM_LC,HS,Late Diastolic Murmur,M,LC,True,1,abnormal
+M_MSM_A,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/M_MSM_A.wav,M_MSM_A,HS,Mid Systolic Murmur,M,Apex,True,1,abnormal
+F_N_RUSB,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/F_N_RUSB.wav,F_N_RUSB,HS,Normal,F,RUSB,True,0,normal
+F_MSM_A,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/F_MSM_A.wav,F_MSM_A,HS,Mid Systolic Murmur,F,Apex,True,1,abnormal
+M_N_LC,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/M_N_LC.wav,M_N_LC,HS,Normal,M,LC,True,0,normal
+F_LSM_LUSB,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/F_LSM_LUSB.wav,F_LSM_LUSB,HS,Late Systolic Murmur,F,LUSB,True,1,abnormal
+M_LSM_RUSB,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/M_LSM_RUSB.wav,M_LSM_RUSB,HS,Late Systolic Murmur,M,RUSB,True,1,abnormal
+F_AF_A,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/F_AF_A.wav,F_AF_A,HS,Atrial Fibrillation,F,Apex,True,1,abnormal
+F_S4_RC,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/F_S4_RC.wav,F_S4_RC,HS,S4,F,RC,True,1,abnormal
+F_ESM_RUSB,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/F_ESM_RUSB.wav,F_ESM_RUSB,HS,Early Systolic Murmur,F,RUSB,True,1,abnormal
+F_LSM_A,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/F_LSM_A.wav,F_LSM_A,HS,Late Systolic Murmur,F,Apex,True,1,abnormal
+M_MSM_LUSB,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/M_MSM_LUSB.wav,M_MSM_LUSB,HS,Mid Systolic Murmur,M,LUSB,True,1,abnormal
+F_ESM_LUSB,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/F_ESM_LUSB.wav,F_ESM_LUSB,HS,Early Systolic Murmur,F,LUSB,True,1,abnormal
+M_MSM_RC,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/M_MSM_RC.wav,M_MSM_RC,HS,Mid Systolic Murmur,M,RC,True,1,abnormal
+M_LDM_LUSB,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/M_LDM_LUSB.wav,M_LDM_LUSB,HS,Late Diastolic Murmur,M,LUSB,True,1,abnormal
+M_ESM_RUSB,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/M_ESM_RUSB.wav,M_ESM_RUSB,HS,Early Systolic Murmur,M,RUSB,True,1,abnormal
+M_S3_LUSB,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/M_S3_LUSB.wav,M_S3_LUSB,HS,S3,M,LUSB,True,1,abnormal
+F_LDM_A,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/F_LDM_A.wav,F_LDM_A,HS,Late Diastolic Murmur,F,Apex,True,1,abnormal
+M_ESM_LUSB,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/M_ESM_LUSB.wav,M_ESM_LUSB,HS,Early Systolic Murmur,M,LUSB,True,1,abnormal
+F_S3_LLSB,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/F_S3_LLSB.wav,F_S3_LLSB,HS,S3,F,LLSB,True,1,abnormal
+M_LDM_LLSB,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/M_LDM_LLSB.wav,M_LDM_LLSB,HS,Late Diastolic Murmur,M,LLSB,True,1,abnormal
+F_AF_LUSB,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/F_AF_LUSB.wav,F_AF_LUSB,HS,Atrial Fibrillation,F,LUSB,True,1,abnormal
+F_T_RC,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/F_T_RC.wav,F_T_RC,HS,Tachycardia,F,LC,True,1,abnormal
+F_T_A,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/F_T_A.wav,F_T_A,HS,Tachycardia,F,Apex,True,1,abnormal
+F_LDM_LUSB,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/F_LDM_LUSB.wav,F_LDM_LUSB,HS,Late Diastolic Murmur,F,LUSB,True,1,abnormal
+F_S3_A,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/F_S3_A.wav,F_S3_A,HS,S3,F,Apex,True,1,abnormal
+M_S4_LUSB,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/M_S4_LUSB.wav,M_S4_LUSB,HS,S4,M,LUSB,True,1,abnormal
+M_AVB_LLSB,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/M_AVB_LLSB.wav,M_AVB_LLSB,HS,AV Block,M,LLSB,True,1,abnormal
+F_S3_LC,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/F_S3_LC.wav,F_S3_LC,HS,S3,F,LC,True,1,abnormal
+M_AVB_A,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/M_AVB_A.wav,M_AVB_A,HS,AV Block,M,Apex,True,1,abnormal
+M_T_LUSB,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/M_T_LUSB.wav,M_T_LUSB,HS,Tachycardia,M,LUSB,True,1,abnormal
+M_AF_LC,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/M_AF_LC.wav,M_AF_LC,HS,Atrial Fibrillation,M,LC,True,1,abnormal
+M_LSM_LUSB,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/M_LSM_LUSB.wav,M_LSM_LUSB,HS,Late Systolic Murmur,M,LUSB,True,1,abnormal
+F_LDM_LLSB,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/F_LDM_LLSB.wav,F_LDM_LLSB,HS,Late Diastolic Murmur,F,LLSB,True,1,abnormal
+F_MSM_LUSB,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/F_MSM_LUSB.wav,F_MSM_LUSB,HS,Mid Systolic Murmur,F,LUSB,True,1,abnormal
+F_MSM_LLSB,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/F_MSM_LLSB.wav,F_MSM_LLSB,HS,Mid Systolic Murmur,F,LLSB,True,1,abnormal
+M_AVB_RC,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/M_AVB_RC.wav,M_AVB_RC,HS,AV Block,M,RC,True,1,abnormal
+M_N_LLSB,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/M_N_LLSB.wav,M_N_LLSB,HS,Normal,M,LLSB,True,0,normal
+M_MSM_RUSB,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/M_MSM_RUSB.wav,M_MSM_RUSB,HS,Mid Systolic Murmur,M,RUSB,True,1,abnormal
+M_S3_LLSB,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/M_S3_LLSB.wav,M_S3_LLSB,HS,S3,M,LLSB,True,1,abnormal
+F_ESM_LLSB,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/F_ESM_LLSB.wav,F_ESM_LLSB,HS,Early Systolic Murmur,F,LLSB,True,1,abnormal
+F_LSM_LLSB,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/F_LSM_LLSB.wav,F_LSM_LLSB,HS,Late Systolic Murmur,F,LLSB,True,1,abnormal
+M_ESM_A,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/M_ESM_A.wav,M_ESM_A,HS,Early Systolic Murmur,M,Apex,True,1,abnormal
+M_AF_RUSB,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/HS/HS/M_AF_RUSB.wav,M_AF_RUSB,HS,Atrial Fibrillation,M,RUSB,True,1,abnormal
+H0001,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0001.wav,1,MixH,Late Systolic Murmur,F,LUSB,True,1,abnormal
+H0002,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0002.wav,2,MixH,S3,F,RLA,True,1,abnormal
+H0003,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0003.wav,3,MixH,Atrial Fibrillation,M,LMA,True,1,abnormal
+H0004,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0004.wav,4,MixH,S3,F,Apex,True,1,abnormal
+H0005,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0005.wav,5,MixH,AV Block,M,RUSB,True,1,abnormal
+H0006,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0006.wav,6,MixH,S3,F,RC,True,1,abnormal
+H0007,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0007.wav,7,MixH,Tachycardia,M,Apex,True,1,abnormal
+H0008,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0008.wav,8,MixH,Early Systolic Murmur,F,LMA,True,1,abnormal
+H0009,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0009.wav,9,MixH,Mid Systolic Murmur,M,LUA,True,1,abnormal
+H0010,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0010.wav,10,MixH,Early Systolic Murmur,F,LUA,True,1,abnormal
+H0011,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0011.wav,11,MixH,S4,M,Apex,True,1,abnormal
+H0012,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0012.wav,12,MixH,AV Block,F,RMA,True,1,abnormal
+H0013,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0013.wav,13,MixH,Atrial Fibrillation,F,RC,True,1,abnormal
+H0014,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0014.wav,14,MixH,Late Diastolic Murmur,F,LUA,True,1,abnormal
+H0015,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0015.wav,15,MixH,Late Diastolic Murmur,F,LUA,True,1,abnormal
+H0016,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0016.wav,16,MixH,Atrial Fibrillation,F,RLA,True,1,abnormal
+H0017,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0017.wav,17,MixH,S3,F,RC,True,1,abnormal
+H0018,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0018.wav,18,MixH,Late Systolic Murmur,F,RMA,True,1,abnormal
+H0019,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0019.wav,19,MixH,Tachycardia,M,RUA,True,1,abnormal
+H0020,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0020.wav,20,MixH,Late Diastolic Murmur,F,RLA,True,1,abnormal
+H0021,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0021.wav,21,MixH,Late Systolic Murmur,M,LUSB,True,1,abnormal
+H0022,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0022.wav,22,MixH,AV Block,M,LMA,True,1,abnormal
+H0023,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0023.wav,23,MixH,Tachycardia,M,LC,True,1,abnormal
+H0024,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0024.wav,24,MixH,S4,M,LUSB,True,1,abnormal
+H0025,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0025.wav,25,MixH,Atrial Fibrillation,M,RC,True,1,abnormal
+H0026,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0026.wav,26,MixH,S3,F,LUSB,True,1,abnormal
+H0027,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0027.wav,27,MixH,Late Diastolic Murmur,M,RMA,True,1,abnormal
+H0028,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0028.wav,28,MixH,AV Block,F,RC,True,1,abnormal
+H0029,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0029.wav,29,MixH,Tachycardia,M,LC,True,1,abnormal
+H0030,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0030.wav,30,MixH,S4,F,RC,True,1,abnormal
+H0031,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0031.wav,31,MixH,Late Systolic Murmur,F,RC,True,1,abnormal
+H0032,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0032.wav,32,MixH,Tachycardia,F,LUA,True,1,abnormal
+H0033,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0033.wav,33,MixH,Late Systolic Murmur,F,LUSB,True,1,abnormal
+H0034,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0034.wav,34,MixH,Early Systolic Murmur,M,RC,True,1,abnormal
+H0035,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0035.wav,35,MixH,S4,M,RLA,True,1,abnormal
+H0036,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0036.wav,36,MixH,S3,M,LUA,True,1,abnormal
+H0037,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0037.wav,37,MixH,AV Block,M,LLSB,True,1,abnormal
+H0038,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0038.wav,38,MixH,S3,F,LLSB,True,1,abnormal
+H0039,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0039.wav,39,MixH,Normal,M,LC,True,0,normal
+H0040,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0040.wav,40,MixH,Tachycardia,M,LC,True,1,abnormal
+H0041,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0041.wav,41,MixH,Atrial Fibrillation,F,LLA,True,1,abnormal
+H0042,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0042.wav,42,MixH,Mid Systolic Murmur,F,RUA,True,1,abnormal
+H0043,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0043.wav,43,MixH,Tachycardia,M,LLSB,True,1,abnormal
+H0044,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0044.wav,44,MixH,Normal,M,RC,True,0,normal
+H0045,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0045.wav,45,MixH,Late Diastolic Murmur,M,LLSB,True,1,abnormal
+H0046,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0046.wav,46,MixH,Atrial Fibrillation,F,LMA,True,1,abnormal
+H0047,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0047.wav,47,MixH,Atrial Fibrillation,M,RMA,True,1,abnormal
+H0048,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0048.wav,48,MixH,S4,F,RLA,True,1,abnormal
+H0049,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0049.wav,49,MixH,S4,M,RUA,True,1,abnormal
+H0050,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0050.wav,50,MixH,Early Systolic Murmur,F,LUSB,True,1,abnormal
+H0051,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0051.wav,51,MixH,Tachycardia,F,RC,True,1,abnormal
+H0052,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0052.wav,52,MixH,Early Systolic Murmur,F,LC,True,1,abnormal
+H0053,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0053.wav,53,MixH,Atrial Fibrillation,F,LLSB,True,1,abnormal
+H0054,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0054.wav,54,MixH,Late Diastolic Murmur,F,RUSB,True,1,abnormal
+H0055,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0055.wav,55,MixH,Late Systolic Murmur,M,RC,True,1,abnormal
+H0056,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0056.wav,56,MixH,AV Block,F,LUSB,True,1,abnormal
+H0057,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0057.wav,57,MixH,Late Diastolic Murmur,F,RLA,True,1,abnormal
+H0058,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0058.wav,58,MixH,S4,M,RUSB,True,1,abnormal
+H0059,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0059.wav,59,MixH,S3,F,RLA,True,1,abnormal
+H0060,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0060.wav,60,MixH,Late Diastolic Murmur,M,LMA,True,1,abnormal
+H0061,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0061.wav,61,MixH,S4,F,LLSB,True,1,abnormal
+H0062,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0062.wav,62,MixH,Tachycardia,F,RMA,True,1,abnormal
+H0063,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0063.wav,63,MixH,S4,F,RUA,True,1,abnormal
+H0064,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0064.wav,64,MixH,S4,M,Apex,True,1,abnormal
+H0065,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0065.wav,65,MixH,Atrial Fibrillation,F,Apex,True,1,abnormal
+H0066,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0066.wav,66,MixH,Normal,M,LLSB,True,0,normal
+H0067,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0067.wav,67,MixH,Atrial Fibrillation,F,RUA,True,1,abnormal
+H0068,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0068.wav,68,MixH,S3,M,RUSB,True,1,abnormal
+H0069,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0069.wav,69,MixH,Late Systolic Murmur,M,RLA,True,1,abnormal
+H0070,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0070.wav,70,MixH,Late Systolic Murmur,F,LUA,True,1,abnormal
+H0071,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0071.wav,71,MixH,S3,M,RUSB,True,1,abnormal
+H0072,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0072.wav,72,MixH,S3,M,Apex,True,1,abnormal
+H0073,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0073.wav,73,MixH,Mid Systolic Murmur,M,LMA,True,1,abnormal
+H0074,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0074.wav,74,MixH,Normal,F,RUA,True,0,normal
+H0075,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0075.wav,75,MixH,Early Systolic Murmur,F,LUSB,True,1,abnormal
+H0076,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0076.wav,76,MixH,Mid Systolic Murmur,F,LMA,True,1,abnormal
+H0077,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0077.wav,77,MixH,Late Diastolic Murmur,F,RUA,True,1,abnormal
+H0078,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0078.wav,78,MixH,Late Systolic Murmur,M,RMA,True,1,abnormal
+H0079,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0079.wav,79,MixH,Tachycardia,F,LC,True,1,abnormal
+H0080,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0080.wav,80,MixH,Mid Systolic Murmur,M,LUSB,True,1,abnormal
+H0081,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0081.wav,81,MixH,Late Systolic Murmur,F,LLSB,True,1,abnormal
+H0082,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0082.wav,82,MixH,Late Systolic Murmur,F,LUA,True,1,abnormal
+H0083,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0083.wav,83,MixH,AV Block,M,LLSB,True,1,abnormal
+H0084,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0084.wav,84,MixH,Early Systolic Murmur,M,LMA,True,1,abnormal
+H0085,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0085.wav,85,MixH,Normal,F,LC,True,0,normal
+H0086,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0086.wav,86,MixH,Mid Systolic Murmur,M,LMA,True,1,abnormal
+H0087,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0087.wav,87,MixH,Atrial Fibrillation,M,LMA,True,1,abnormal
+H0088,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0088.wav,88,MixH,S4,M,LC,True,1,abnormal
+H0089,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0089.wav,89,MixH,Mid Systolic Murmur,M,LC,True,1,abnormal
+H0090,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0090.wav,90,MixH,Tachycardia,M,RUA,True,1,abnormal
+H0091,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0091.wav,91,MixH,Atrial Fibrillation,M,RUSB,True,1,abnormal
+H0092,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0092.wav,92,MixH,S4,M,RC,True,1,abnormal
+H0093,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0093.wav,93,MixH,AV Block,M,LMA,True,1,abnormal
+H0094,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0094.wav,94,MixH,Late Systolic Murmur,M,LC,True,1,abnormal
+H0095,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0095.wav,95,MixH,Mid Systolic Murmur,F,Apex,True,1,abnormal
+H0096,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0096.wav,96,MixH,Normal,M,LUA,True,0,normal
+H0097,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0097.wav,97,MixH,Late Diastolic Murmur,F,RUSB,True,1,abnormal
+H0098,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0098.wav,98,MixH,Tachycardia,M,LUSB,True,1,abnormal
+H0099,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0099.wav,99,MixH,AV Block,F,RUSB,True,1,abnormal
+H0100,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0100.wav,100,MixH,Late Systolic Murmur,F,LLSB,True,1,abnormal
+H0101,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0101.wav,101,MixH,Late Systolic Murmur,M,RMA,True,1,abnormal
+H0102,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0102.wav,102,MixH,Atrial Fibrillation,M,RLA,True,1,abnormal
+H0103,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0103.wav,103,MixH,Normal,F,LLA,True,0,normal
+H0104,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0104.wav,104,MixH,Mid Systolic Murmur,M,LUSB,True,1,abnormal
+H0105,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0105.wav,105,MixH,Late Systolic Murmur,F,RUSB,True,1,abnormal
+H0106,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0106.wav,106,MixH,Normal,M,RC,True,0,normal
+H0107,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0107.wav,107,MixH,Normal,M,LLSB,True,0,normal
+H0108,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0108.wav,108,MixH,Late Systolic Murmur,F,LUA,True,1,abnormal
+H0109,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0109.wav,109,MixH,Mid Systolic Murmur,F,LLA,True,1,abnormal
+H0110,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0110.wav,110,MixH,Early Systolic Murmur,F,RLA,True,1,abnormal
+H0111,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0111.wav,111,MixH,Normal,F,LLA,True,0,normal
+H0112,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0112.wav,112,MixH,Late Systolic Murmur,F,LLA,True,1,abnormal
+H0113,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0113.wav,113,MixH,Mid Systolic Murmur,F,RUSB,True,1,abnormal
+H0114,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0114.wav,114,MixH,Atrial Fibrillation,M,Apex,True,1,abnormal
+H0115,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0115.wav,115,MixH,Atrial Fibrillation,F,LLA,True,1,abnormal
+H0116,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0116.wav,116,MixH,S4,M,RUA,True,1,abnormal
+H0117,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0117.wav,117,MixH,Early Systolic Murmur,M,RMA,True,1,abnormal
+H0118,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0118.wav,118,MixH,Tachycardia,M,RMA,True,1,abnormal
+H0119,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0119.wav,119,MixH,S3,F,LLA,True,1,abnormal
+H0120,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0120.wav,120,MixH,Early Systolic Murmur,F,LLA,True,1,abnormal
+H0121,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0121.wav,121,MixH,AV Block,F,LLA,True,1,abnormal
+H0122,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0122.wav,122,MixH,Normal,M,RC,True,0,normal
+H0123,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0123.wav,123,MixH,Late Diastolic Murmur,M,LMA,True,1,abnormal
+H0124,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0124.wav,124,MixH,AV Block,M,RMA,True,1,abnormal
+H0125,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0125.wav,125,MixH,Mid Systolic Murmur,F,LUSB,True,1,abnormal
+H0126,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0126.wav,126,MixH,Normal,F,LLA,True,0,normal
+H0127,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0127.wav,127,MixH,S3,M,LLA,True,1,abnormal
+H0128,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0128.wav,128,MixH,Mid Systolic Murmur,F,RUSB,True,1,abnormal
+H0129,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0129.wav,129,MixH,Tachycardia,F,Apex,True,1,abnormal
+H0130,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0130.wav,130,MixH,Early Systolic Murmur,F,LLSB,True,1,abnormal
+H0131,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0131.wav,131,MixH,S4,M,LC,True,1,abnormal
+H0132,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0132.wav,132,MixH,S3,M,LUA,True,1,abnormal
+H0133,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0133.wav,133,MixH,Normal,F,Apex,True,0,normal
+H0134,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0134.wav,134,MixH,AV Block,M,LMA,True,1,abnormal
+H0135,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0135.wav,135,MixH,S4,M,LC,True,1,abnormal
+H0136,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0136.wav,136,MixH,Tachycardia,M,RUSB,True,1,abnormal
+H0137,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0137.wav,137,MixH,Late Diastolic Murmur,M,Apex,True,1,abnormal
+H0138,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0138.wav,138,MixH,Tachycardia,M,LLA,True,1,abnormal
+H0139,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0139.wav,139,MixH,S3,M,LC,True,1,abnormal
+H0140,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0140.wav,140,MixH,Early Systolic Murmur,F,RLA,True,1,abnormal
+H0141,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0141.wav,141,MixH,S4,M,Apex,True,1,abnormal
+H0142,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0142.wav,142,MixH,Mid Systolic Murmur,F,RMA,True,1,abnormal
+H0143,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0143.wav,143,MixH,Early Systolic Murmur,F,RLA,True,1,abnormal
+H0144,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0144.wav,144,MixH,AV Block,F,LUA,True,1,abnormal
+H0145,/media/tnzr/AuxVolume/datasets/HLS-CMDS Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope/Mix/Mix/H0145.wav,145,MixH,Late Diastolic Murmur,M,RUSB,True,1,abnormal

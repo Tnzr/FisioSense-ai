@@ -1,4 +1,4 @@
-# CardiaSense web app (PoC)
+# Asculto web app (PoC)
 fastapi==0.142.2
 uvicorn[standard]==0.54.0
 python-multipart==0.0.32

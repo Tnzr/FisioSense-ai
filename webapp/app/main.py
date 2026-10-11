@@ -1,4 +1,4 @@
-"""CardiaSense web app: Inference-as-a-Service + Educational Interactive.
+"""Asculto web app: Inference-as-a-Service + Educational Interactive.
 
 Run:  uvicorn webapp.app.main:app --host 0.0.0.0 --port 8000
 """
@@ -11,19 +11,20 @@ import tempfile
 from typing import List, Optional
 
 from fastapi import FastAPI, File, Form, HTTPException, Request, UploadFile
-from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
+from fastapi.responses import HTMLResponse, JSONResponse, Response
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 WEBAPP = os.path.dirname(HERE)
 
-from . import game  # noqa: E402
+from . import course, game  # noqa: E402
 from . import inference, report  # noqa: E402
 from . import llm as llm_mod  # noqa: E402
+from . import playback  # noqa: E402
 from .config import DISCLAIMER  # noqa: E402
 
-app = FastAPI(title="CardiaSense — Inference as a Service", version="0.1.0")
+app = FastAPI(title="Asculto — Inference as a Service", version="0.1.0")
 app.mount("/static", StaticFiles(directory=os.path.join(WEBAPP, "static")), name="static")
 templates = Jinja2Templates(directory=os.path.join(WEBAPP, "templates"))
 
@@ -83,6 +84,7 @@ def health() -> JSONResponse:
     reg = inference.get_registry()
     return JSONResponse({
         "status": "ok",
+        "backend": os.environ.get("ASCULTO_BACKEND", "torch"),
         "device": str(reg.device),
         "loaded_heads": reg.available(),
         "errors": reg.errors,
@@ -99,6 +101,9 @@ def index(request: Request):
         "errors": reg.errors,
         "disclaimer": DISCLAIMER,
         "domains": game.DOMAINS,
+        "examples": course.landing_examples(),
+        "knowledge": course.knowledge,
+        "audio_url": course.audio_url,
     })
 
 
@@ -219,10 +224,46 @@ async def game_answer(payload: dict) -> JSONResponse:
 
 @app.get("/game/audio/{sample_id}")
 def game_audio(sample_id: str, task: str = "heart", scheme: str = "10class"):
+    """Dataset clip re-encoded for browser playback (4 kHz WAVs decode as
+    silence in HTML5 `<audio>`; see `webapp.app.playback`)."""
     path = game.resolve_audio_path(sample_id, task, scheme)
     if not path:
         raise HTTPException(status_code=404, detail="clip not found")
-    return FileResponse(path, media_type="audio/wav")
+    return Response(content=playback.playback_bytes_for(path), media_type="audio/wav")
+
+
+# ------------------------------------------------------------ training course
+@app.get("/course", response_class=HTMLResponse)
+def course_home(request: Request):
+    return templates.TemplateResponse(request, "course.html", {
+        "modules": course.MODULES, "disclaimer": DISCLAIMER,
+    })
+
+
+@app.get("/course/{module_id}", response_class=HTMLResponse)
+def course_module(request: Request, module_id: str):
+    mod = course.by_id(module_id)
+    if not mod:
+        raise HTTPException(status_code=404, detail="module not found")
+    domain = dict(game.DOMAINS.get(mod.practice_domain, {}))
+    if mod.practice_domain:
+        domain["key"] = mod.practice_domain
+    return templates.TemplateResponse(request, "course_module.html", {
+        "module": mod,
+        "modules": course.MODULES,
+        "module_index": next((i for i, m in enumerate(course.MODULES) if m.id == module_id), 0),
+        "practice_domain": domain,
+        "disclaimer": DISCLAIMER,
+        "knowledge": course.knowledge,
+        "audio_url": course.audio_url,
+    })
+
+
+@app.post("/api/course/quiz")
+async def course_quiz(payload: dict) -> JSONResponse:
+    module_id = payload.get("module_id")
+    answers = payload.get("answers") or []
+    return JSONResponse(course.grade_quiz(module_id, answers))
 
 
 @app.get("/demo/report", response_class=HTMLResponse)

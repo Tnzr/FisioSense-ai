@@ -1,4 +1,4 @@
-# CardiaSense Web App — Inference-as-a-Service & Educational Interactive
+# Asculto Web App — Inference-as-a-Service & Educational Interactive
 
 > Status: **implementation plan + specification (Stage 1 PoC)**
 > Companion to `BusinessPlan.md`, `ProductComputeArchitecture.md`, `TechStack.md`.
@@ -125,7 +125,7 @@ environment** recommendations. Implementation is provider-agnostic
 (`webapp/app/llm.py`):
 
 - **LLMClient** — OpenAI-compatible `chat/completions`, enabled by
-  `CARDIASENSE_LLM_*` env vars (also works with local Ollama).
+  `ASCULTO_LLM_*` env vars (also works with local Ollama).
 - **LLMSynthesizer** — deterministic offline fallback with the same output
   shape, so the app works and stays testable without any API key.
 

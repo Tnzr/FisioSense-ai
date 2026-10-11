@@ -1,0 +1,25 @@
+name: deploy-api
+
+on:
+  push:
+    branches: [main]
+    paths: ["gateway/**", ".github/workflows/deploy-api.yml"]
+  workflow_dispatch:
+
+jobs:
+  worker:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: gateway } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "20" }
+      - run: npm install
+      - run: npm run typecheck
+      - name: Deploy Worker
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy
+          workingDirectory: gateway

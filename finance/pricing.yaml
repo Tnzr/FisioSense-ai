@@ -1,0 +1,99 @@
+# Asculto unit-economics inputs.
+#
+# All prices are list prices checked October 2026 (see
+# .kilo/plans/1791167801898-deployment-strategy.md S3/S6). Every number here is
+# overridable; `finance/model.py` reads this file and emits docs/Finance.md.
+
+brand: Asculto
+
+# --- subscription tiers -------------------------------------------------------
+# `mix` is the share of *paying* users used for the blended ARPU/COGS. Enterprise
+# is custom/OEM and excluded from the consumer blend by default.
+tiers:
+  free:
+    price: 0
+    reports_per_month: 5
+    llm: false
+    batch: false
+  pro:
+    price: 9
+    reports_per_month: 25
+    llm: true
+    batch: false
+  research:
+    price: 29
+    reports_per_month: 100
+    llm: true
+    batch: true
+  enterprise:
+    price: 500
+    reports_per_month: 1000
+    llm: true
+    batch: true
+
+mix:            # share of paying users (consumer blend)
+  pro: 0.85
+  research: 0.15
+  enterprise: 0.00
+
+# --- per-report / per-user costs ---------------------------------------------
+costs:
+  inference_per_report_cpu: 0.0004   # Cloudflare Containers CPU, ~10 s all-head report
+  llm_per_report: 0.001              # paid tiers only; offline synth is $0
+  storage_db_egress_per_user_month: 0.05
+  gpu_per_report: 0.004              # sensitivity: ~8x CPU (H100 ~1 s)
+  payment_fee_pct: 0.029             # Stripe card
+  payment_fee_fixed: 0.30            # per monthly charge
+  billing_fee_pct: 0.0               # Stripe Billing add-on (toggle; plan headline uses card-only)
+  annual_plan_discount_months: 2     # "2 months free"
+  annual_plan_adoption: 0.0          # 0.40 = 40% adopt annual
+  sepa_payment_fee_pct: 0.008        # SEPA/ACH direct debit (sensitivity)
+
+# --- growth / funnel ----------------------------------------------------------
+growth:
+  monthly_churn: 0.05
+  paid_conversion_of_mau: 0.03
+  cac: 45                            # content/community blended
+  cac_paid_ads: 90                   # sensitivity
+  reinvest_rate: 0.5                 # share of profit redeployed to marketing
+  roas: 2.0
+  rule_of_40_growth: 0.35            # conservative annual revenue growth for the Rule of 40
+
+# --- fixed monthly opex -------------------------------------------------------
+fixed_opex:
+  bootstrap: 2000
+  beta: 2500
+  early: 3000
+  with_founder_draw: 8000
+  founder_draw: 4000
+  marketing_low: 1500
+  marketing_high: 4000
+
+# scenarios shown in the break-even table (plan S6.3)
+break_even_opex: [bootstrap, early, founder_draw, with_founder_draw]
+
+# --- illustrative self-investing ramp (plan S6.4) -----------------------------
+ramp:
+  - {month: 3,  free_mau: 1500,   paying: 45,   fixed: 2000}
+  - {month: 6,  free_mau: 6000,   paying: 180,  fixed: 2500}
+  - {month: 9,  free_mau: 15000,  paying: 450,  fixed: 3000}
+  - {month: 12, free_mau: 30000,  paying: 900,  fixed: 4000}
+  - {month: 18, free_mau: 80000,  paying: 2400, fixed: 7000}
+  - {month: 24, free_mau: 200000, paying: 6000, fixed: 14000}
+
+# --- monthly infra cost floor by stage (plan S3.2) ----------------------------
+infra_floors:
+  stage0_poc: 0
+  stage1a_demo: 6
+  stage1b_beta: 30
+  stage1c_1k_reports: 70
+  stage2_k8s: 160
+  stage2_gpu: 600
+
+# --- investor targets ---------------------------------------------------------
+targets:
+  ltv_cac_min: 3.0
+  cac_payback_max_months: 6.0
+  rule_of_40_min: 40.0
+  gross_margin_min: 0.90
+  nrr_target: 1.10

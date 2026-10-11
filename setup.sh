@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
-# CardiaSense quick setup: create the venv, install dependencies, and download
+# Asculto quick setup: create the venv, install dependencies, and download
 # the HLS-CMDS dataset from its Zenodo source if it is not already present.
 #
 # Usage:
 #   ./setup.sh                      # local data/ + defaults
-#   CARDIASENSE_DATA_DIR=/path ./setup.sh   # point at an existing dataset
+#   ASCULTO_DATA_DIR=/path ./setup.sh   # point at an existing dataset
 #   WRITE_ENV=0 ./setup.sh          # don't write .env (CI / dry runs)
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$ROOT"
 
-DATA_DIR="${CARDIASENSE_DATA_DIR:-$ROOT/data/HLS-CMDS}"
+DATA_DIR="${ASCULTO_DATA_DIR:-$ROOT/data/HLS-CMDS}"
 ZENODO="https://zenodo.org/api/records/15376628/files"
 FILES="HLS_CMDS_README.txt HS.csv LS.csv Mix.csv HS.zip LS.zip Mix.zip"
 PY="${ROOT}/.venv/bin/python"
@@ -48,12 +48,12 @@ uv pip install --python "$PY" -r ml/requirements.txt -r webapp/requirements.txt
 [ -f notebooks/requirements.txt ] && uv pip install --python "$PY" -r notebooks/requirements.txt || true
 
 echo "[setup] registering the Jupyter kernel..."
-"$PY" -m ipykernel install --user --name cardiasense --display-name "Python 3 (cardiasense)" || echo "skip: jupyter not installed"
+"$PY" -m ipykernel install --user --name asculto --display-name "Python 3 (asculto)" || echo "skip: jupyter not installed"
 
 # ---- 3. .env (used by config to find the dataset)
 if [ "${WRITE_ENV:-1}" = "1" ]; then
-  printf 'CARDIASENSE_DATA_DIR=%s\n' "$DATA_DIR" > "$ROOT/.env"
-  echo "[setup] wrote .env -> CARDIASENSE_DATA_DIR=$DATA_DIR"
+  printf 'ASCULTO_DATA_DIR=%s\n' "$DATA_DIR" > "$ROOT/.env"
+  echo "[setup] wrote .env -> ASCULTO_DATA_DIR=$DATA_DIR"
 fi
 
 # ---- 4. verify the dataset matches the expected manifest counts
